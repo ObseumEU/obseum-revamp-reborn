@@ -32,26 +32,26 @@ const ClientLogos = () => {
           </p>
         </div>
         
-        <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-6 items-center">
+        <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-8 items-center">
           {clients.map((client, index) => (
             <div 
               key={index}
-              className="flex items-center justify-center h-24 w-full p-6 rounded-2xl bg-gradient-card border border-border/30"
+              className="flex items-center justify-center h-28 w-full p-8 rounded-3xl bg-gradient-subtle border border-border/20 hover:border-primary/30 transition-all duration-300 hover:scale-105"
             >
               {client.logo.startsWith('http') ? (
                 <img 
                   src={client.logo} 
                   alt={client.name}
-                  className="max-w-full max-h-12 w-auto object-contain opacity-60"
+                  className="max-w-full max-h-16 w-auto object-contain filter brightness-0 dark:brightness-100 opacity-70 hover:opacity-100 transition-opacity duration-300"
                 />
               ) : client.logo.endsWith('.svg') ? (
                 <img 
                   src={client.logo} 
                   alt={client.name}
-                  className="max-w-full max-h-12 w-auto object-contain opacity-60 text-muted-foreground"
+                  className="max-w-full max-h-16 w-auto object-contain filter brightness-0 dark:brightness-100 opacity-70 hover:opacity-100 transition-opacity duration-300"
                 />
               ) : (
-                <span className="text-lg md:text-xl font-bold text-muted-foreground text-center">
+                <span className="text-xl md:text-2xl font-bold text-muted-foreground/70 hover:text-muted-foreground transition-colors duration-300 text-center">
                   {client.logo}
                 </span>
               )}
