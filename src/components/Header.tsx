@@ -21,6 +21,9 @@ const Header = () => {
             <a href="#about" className="text-foreground hover:text-primary transition-smooth">
               {t('nav.about')}
             </a>
+            <a href="/career" className="text-foreground hover:text-primary transition-smooth">
+              Career
+            </a>
             <div className="flex items-center space-x-4">
               <div className="flex items-center space-x-2">
                 <button
