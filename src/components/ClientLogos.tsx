@@ -21,113 +21,73 @@ const clients = [
 const ClientLogos = () => {
   const { t } = useLanguage();
   return (
-    <section className="py-32 bg-gradient-mesh relative overflow-hidden">
-      {/* Background decoration */}
-      <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-accent/5"></div>
-      <div className="absolute top-1/2 left-1/4 w-96 h-96 bg-primary/10 rounded-full blur-3xl"></div>
-      <div className="absolute top-1/3 right-1/4 w-80 h-80 bg-accent/10 rounded-full blur-3xl"></div>
-      
-      <div className="container mx-auto px-6 relative z-10">
-        <div className="text-center mb-24">
-          <div className="inline-flex items-center px-6 py-3 rounded-full bg-gradient-primary/10 border border-primary/20 mb-8 backdrop-blur-lg shadow-elegant">
-            <div className="w-2 h-2 bg-primary rounded-full mr-3 animate-pulse"></div>
-            <span className="text-primary font-semibold tracking-wide">Trusted Partners</span>
-          </div>
-          <h2 className="text-5xl md:text-6xl font-bold mb-8 bg-gradient-primary bg-clip-text text-transparent">
+    <section className="py-20 bg-background/95 backdrop-blur-sm">
+      <div className="container mx-auto px-6">
+        <div className="text-center mb-16">
+          <span className="text-sm uppercase tracking-[0.2em] text-muted-foreground/80 font-medium mb-4 block">
             {t('clients.title')}
-          </h2>
-          <p className="text-xl md:text-2xl text-muted-foreground/80 max-w-4xl mx-auto leading-relaxed">
-            {t('clients.subtitle')}
-          </p>
+          </span>
+          <div className="w-12 h-px bg-gradient-to-r from-transparent via-primary to-transparent mx-auto"></div>
         </div>
         
-        <div className="relative overflow-hidden rounded-3xl bg-gradient-card/30 backdrop-blur-xl border border-border/20 p-8 shadow-premium">
-          {/* Enhanced fade overlays */}
-          <div className="absolute left-0 top-0 bottom-0 w-32 bg-gradient-to-r from-background via-background/80 to-transparent z-20 pointer-events-none"></div>
-          <div className="absolute right-0 top-0 bottom-0 w-32 bg-gradient-to-l from-background via-background/80 to-transparent z-20 pointer-events-none"></div>
+        <div className="relative">
+          {/* Minimal fade overlays */}
+          <div className="absolute left-0 top-0 bottom-0 w-16 bg-gradient-to-r from-background to-transparent z-10"></div>
+          <div className="absolute right-0 top-0 bottom-0 w-16 bg-gradient-to-l from-background to-transparent z-10"></div>
           
-          {/* Decorative lines */}
-          <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-primary/50 to-transparent"></div>
-          <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-accent/50 to-transparent"></div>
-          
-          {/* Scrolling container */}
-          <div className="flex animate-[scroll_80s_linear_infinite] hover:[animation-play-state:paused] py-4">
-            {/* First set of logos */}
+          {/* Clean scrolling container */}
+          <div className="flex animate-[scroll_70s_linear_infinite] hover:[animation-play-state:paused] items-center">
+            {/* First set */}
             {clients.map((client, index) => (
               <div 
                 key={`first-${index}`}
-                className="group flex items-center justify-center h-32 w-72 flex-shrink-0 p-10 mx-6 rounded-2xl bg-gradient-to-br from-card/60 to-card/20 border border-border/30 hover:border-primary/40 transition-all duration-500 hover:scale-110 hover:shadow-glow backdrop-blur-sm relative overflow-hidden"
+                className="flex items-center justify-center h-20 w-48 flex-shrink-0 mx-8 group cursor-default"
               >
-                {/* Hover effect overlay */}
-                <div className="absolute inset-0 bg-gradient-primary/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-2xl"></div>
-                
                 {client.logo.startsWith('http') ? (
                   <img 
                     src={client.logo} 
                     alt={client.name}
-                    className="relative z-10 max-w-full max-h-20 w-auto object-contain opacity-70 group-hover:opacity-100 transition-all duration-500 filter brightness-0 contrast-100 group-hover:brightness-100 group-hover:contrast-125 group-hover:drop-shadow-lg"
-                    style={{
-                      filter: 'brightness(0) saturate(100%) invert(70%) sepia(0%) saturate(0%) hue-rotate(0deg)',
-                    }}
+                    className="max-h-12 w-auto object-contain opacity-40 group-hover:opacity-70 transition-opacity duration-300 grayscale group-hover:grayscale-0"
                   />
                 ) : client.logo.endsWith('.svg') ? (
                   <img 
                     src={client.logo} 
                     alt={client.name}
-                    className="relative z-10 max-w-full max-h-20 w-auto object-contain opacity-70 group-hover:opacity-100 transition-all duration-500 filter brightness-0 contrast-100 group-hover:brightness-100 group-hover:contrast-125 group-hover:drop-shadow-lg"
-                    style={{
-                      filter: 'brightness(0) saturate(100%) invert(70%) sepia(0%) saturate(0%) hue-rotate(0deg)',
-                    }}
+                    className="max-h-12 w-auto object-contain opacity-40 group-hover:opacity-70 transition-opacity duration-300 grayscale group-hover:grayscale-0"
                   />
                 ) : (
-                  <span className="relative z-10 text-2xl md:text-3xl font-bold text-muted-foreground/70 group-hover:text-foreground transition-all duration-500 text-center tracking-wider">
+                  <span className="text-lg font-medium text-muted-foreground/40 group-hover:text-muted-foreground/70 transition-colors duration-300 tracking-wide">
                     {client.logo}
                   </span>
                 )}
               </div>
             ))}
-            {/* Duplicate set for seamless loop */}
+            {/* Duplicate set */}
             {clients.map((client, index) => (
               <div 
                 key={`second-${index}`}
-                className="group flex items-center justify-center h-32 w-72 flex-shrink-0 p-10 mx-6 rounded-2xl bg-gradient-to-br from-card/60 to-card/20 border border-border/30 hover:border-primary/40 transition-all duration-500 hover:scale-110 hover:shadow-glow backdrop-blur-sm relative overflow-hidden"
+                className="flex items-center justify-center h-20 w-48 flex-shrink-0 mx-8 group cursor-default"
               >
-                {/* Hover effect overlay */}
-                <div className="absolute inset-0 bg-gradient-primary/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-2xl"></div>
-                
                 {client.logo.startsWith('http') ? (
                   <img 
                     src={client.logo} 
                     alt={client.name}
-                    className="relative z-10 max-w-full max-h-20 w-auto object-contain opacity-70 group-hover:opacity-100 transition-all duration-500 filter brightness-0 contrast-100 group-hover:brightness-100 group-hover:contrast-125 group-hover:drop-shadow-lg"
-                    style={{
-                      filter: 'brightness(0) saturate(100%) invert(70%) sepia(0%) saturate(0%) hue-rotate(0deg)',
-                    }}
+                    className="max-h-12 w-auto object-contain opacity-40 group-hover:opacity-70 transition-opacity duration-300 grayscale group-hover:grayscale-0"
                   />
                 ) : client.logo.endsWith('.svg') ? (
                   <img 
                     src={client.logo} 
                     alt={client.name}
-                    className="relative z-10 max-w-full max-h-20 w-auto object-contain opacity-70 group-hover:opacity-100 transition-all duration-500 filter brightness-0 contrast-100 group-hover:brightness-100 group-hover:contrast-125 group-hover:drop-shadow-lg"
-                    style={{
-                      filter: 'brightness(0) saturate(100%) invert(70%) sepia(0%) saturate(0%) hue-rotate(0deg)',
-                    }}
+                    className="max-h-12 w-auto object-contain opacity-40 group-hover:opacity-70 transition-opacity duration-300 grayscale group-hover:grayscale-0"
                   />
                 ) : (
-                  <span className="relative z-10 text-2xl md:text-3xl font-bold text-muted-foreground/70 group-hover:text-foreground transition-all duration-500 text-center tracking-wider">
+                  <span className="text-lg font-medium text-muted-foreground/40 group-hover:text-muted-foreground/70 transition-colors duration-300 tracking-wide">
                     {client.logo}
                   </span>
                 )}
               </div>
             ))}
           </div>
-        </div>
-        
-        {/* Bottom decoration */}
-        <div className="text-center mt-16">
-          <p className="text-sm text-muted-foreground/60 font-medium tracking-wider uppercase">
-            Powering innovation together
-          </p>
         </div>
       </div>
     </section>
