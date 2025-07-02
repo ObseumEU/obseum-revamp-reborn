@@ -5,9 +5,9 @@ const clients = [
   { name: "ČSOB", logo: "ČSOB" },
   { name: "Heimstaden", logo: "Heimstaden" },
   { name: "Home Credit", logo: "Home Credit" },
-  { name: "Innogy", logo: "innogy" },
-  { name: "Cancom", logo: "https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=200&h=100&fit=crop&crop=center" },
-  { name: "Mafra", logo: "https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=200&h=100&fit=crop&crop=center" }
+  { name: "Innogy", logo: "Innogy" },
+  { name: "Cancom", logo: "Cancom" },
+  { name: "Mafra", logo: "Mafra" }
 ];
 
 const ClientLogos = () => {
