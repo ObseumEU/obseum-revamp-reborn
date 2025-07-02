@@ -1,12 +1,16 @@
 import { useLanguage } from "@/contexts/LanguageContext";
 import cancomLogo from "@/assets/cancom-logo.svg";
+import o2Logo from "@/assets/O2-Logo-9.svg";
+import heimLogo from "@/assets/HEIM.svg";
+import homeCreditLogo from "@/assets/Home_Credit__Finance_Bank.svg";
+import innogyLogo from "@/assets/Innogy_Logo.svg";
 
 const clients = [
-  { name: "O2", logo: "O₂" },
+  { name: "O2", logo: o2Logo },
   { name: "ČSOB", logo: "ČSOB" },
-  { name: "Heimstaden", logo: "Heimstaden" },
-  { name: "Home Credit", logo: "Home Credit" },
-  { name: "Innogy", logo: "Innogy" },
+  { name: "Heimstaden", logo: heimLogo },
+  { name: "Home Credit", logo: homeCreditLogo },
+  { name: "Innogy", logo: innogyLogo },
   { name: "Cancom", logo: cancomLogo },
   { name: "Mafra", logo: "Mafra" }
 ];
