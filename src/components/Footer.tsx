@@ -26,7 +26,7 @@ const Footer = () => {
             <h4 className="font-semibold mb-4">{t('footer.contact')}</h4>
             <ul className="space-y-2 text-muted-foreground">
               <li><a href="#" className="hover:text-primary transition-colors">info@obseum.cz</a></li>
-              <li><a href="#" className="hover:text-primary transition-colors">+420 XXX XXX XXX</a></li>
+              <li><a href="tel:+420724676829" className="hover:text-primary transition-colors">+420 724 676 829</a></li>
             </ul>
           </div>
         </div>
