@@ -7,11 +7,7 @@ const Footer = () => {
       <div className="container mx-auto px-6 py-12">
         <div className="grid md:grid-cols-4 gap-8">
           <div className="col-span-2">
-            <img 
-              src="/lovable-uploads/f3956429-f1de-4b4a-a2dd-4b41a0cbaa02.png" 
-              alt="Obseum Logo" 
-              className="h-8 w-auto mb-4"
-            />
+            <h3 className="text-2xl font-bold text-primary mb-4">Obseum</h3>
             <p className="text-muted-foreground max-w-md">
               {t('footer.description')}
             </p>
