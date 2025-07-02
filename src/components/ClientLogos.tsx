@@ -4,10 +4,11 @@ import o2Logo from "@/assets/O2-Logo-9.svg";
 import heimLogo from "@/assets/HEIM.svg";
 import homeCreditLogo from "@/assets/Home_Credit__Finance_Bank.svg";
 import innogyLogo from "@/assets/Innogy_Logo.svg";
+import csobLogo from "@/assets/csob-1.svg";
 
 const clients = [
   { name: "O2", logo: o2Logo },
-  { name: "ČSOB", logo: "ČSOB" },
+  { name: "ČSOB", logo: csobLogo },
   { name: "Heimstaden", logo: heimLogo },
   { name: "Home Credit", logo: "Home Credit" },
   { name: "Innogy", logo: innogyLogo },
