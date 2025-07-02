@@ -39,6 +39,36 @@ const SolutionsShowcase = () => {
       tags: ["AI/ML Integration", "OSA Compliance", "Real-time Analysis", "Legal Automation"]
     },
     {
+      title: language === 'en' ? "Cadastral Process Automation" : "Automatizace Katastrálních Procesů",
+      subtitle: language === 'en' ? "Complete Land Registry Automation" : "Kompletní Automatizace Katastru",
+      description: language === 'en'
+        ? "End-to-end automation of complex cadastral contract processing, including communication orchestration with land registry offices, legal entities, and property owners. Reduces processing time from weeks to hours while ensuring full compliance with cadastral regulations."
+        : "Kompletní automatizace složitých katastrálních smluv včetně orchestrace komunikace s katastrálními úřady, právními subjekty a vlastníky nemovitostí. Zkracuje dobu zpracování z týdnů na hodiny při zajištění plné compliance s katastrálními předpisy.",
+      benefits: [
+        {
+          icon: Clock,
+          title: language === 'en' ? "85% Process Acceleration" : "85% Zrychlení Procesů",
+          color: "text-blue-400"
+        },
+        {
+          icon: Users,
+          title: language === 'en' ? "Multi-party Coordination" : "Koordinace Více Stran",
+          color: "text-purple-400"
+        },
+        {
+          icon: Shield,
+          title: language === 'en' ? "Legal Compliance" : "Právní Compliance",
+          color: "text-green-400"
+        },
+        {
+          icon: FileText,
+          title: language === 'en' ? "Automated Documentation" : "Automatická Dokumentace",
+          color: "text-orange-400"
+        }
+      ],
+      tags: ["Process Automation", "Cadastral Integration", "Communication Orchestration", "Legal Compliance"]
+    },
+    {
       title: language === 'en' ? "Smart Document Processor" : "Inteligentní Procesor Dokumentů",
       subtitle: language === 'en' ? "AI Document Automation" : "AI Automatizace Dokumentů",
       description: language === 'en'
