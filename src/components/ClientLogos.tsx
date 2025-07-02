@@ -13,6 +13,7 @@ const clients = [
   { name: "Home Credit", logo: "Home Credit" },
   { name: "Innogy", logo: innogyLogo },
   { name: "Cancom", logo: "Cancom" },
+  { name: "Mycroft Mind", logo: "Mycroft Mind" },
   { name: "Mafra", logo: "Mafra" }
 ];
 
