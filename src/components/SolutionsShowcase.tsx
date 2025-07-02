@@ -66,7 +66,7 @@ const SolutionsShowcase = () => {
           color: "text-orange-400"
         }
       ],
-      tags: ["Process Automation", "Cadastral Integration", "Communication Orchestration", "Legal Compliance"]
+      tags: ["Process Automation", "Cadastral Integration", "Communication Orchestration", "Legal Compliance", "NLP Processing"]
     },
     {
       title: language === 'en' ? "Smart Document Processor" : "Inteligentní Procesor Dokumentů",
