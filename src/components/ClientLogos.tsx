@@ -42,13 +42,13 @@ const ClientLogos = () => {
                 <img 
                   src={client.logo} 
                   alt={client.name}
-                  className="max-w-full max-h-16 w-auto object-contain opacity-80 hover:opacity-100 transition-opacity duration-300"
+                  className="max-w-full max-h-16 w-auto object-contain opacity-60 hover:opacity-80 transition-opacity duration-300 brightness-0 invert-[0.6] dark:invert-[0.7]"
                 />
               ) : client.logo.endsWith('.svg') ? (
                 <img 
                   src={client.logo} 
                   alt={client.name}
-                  className="max-w-full max-h-16 w-auto object-contain opacity-80 hover:opacity-100 transition-opacity duration-300"
+                  className="max-w-full max-h-16 w-auto object-contain opacity-60 hover:opacity-80 transition-opacity duration-300 brightness-0 invert-[0.6] dark:invert-[0.7]"
                 />
               ) : (
                 <span className="text-xl md:text-2xl font-bold text-muted-foreground/70 hover:text-muted-foreground transition-colors duration-300 text-center">
