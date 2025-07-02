@@ -36,7 +36,7 @@ const SolutionsShowcase = () => {
           color: "text-purple-400"
         }
       ],
-      tags: ["AI/ML Integration", "OSA Compliance", "Real-time Analysis", "Legal Automation"]
+      tags: ["AI/ML Integration", "OSA Compliance", "Real-time Analysis", "Legal Automation", "LLM"]
     },
     {
       title: language === 'en' ? "Cadastral Process Automation" : "Automatizace Katastrálních Procesů",
@@ -66,7 +66,7 @@ const SolutionsShowcase = () => {
           color: "text-orange-400"
         }
       ],
-      tags: ["Process Automation", "Cadastral Integration", "Communication Orchestration", "Legal Compliance", "NLP Processing"]
+      tags: ["Process Automation", "Cadastral Integration", "Communication Orchestration", "Legal Compliance", "NLP Processing", "LLM"]
     },
     {
       title: language === 'en' ? "Smart Document Processor" : "Inteligentní Procesor Dokumentů",
@@ -96,7 +96,7 @@ const SolutionsShowcase = () => {
           color: "text-cyan-400"
         }
       ],
-      tags: ["NLP Processing", "OCR Technology", "Azure AI", "Document Intelligence"]
+      tags: ["NLP Processing", "OCR Technology", "Azure AI", "Document Intelligence", "LLM"]
     }
   ];
 
