@@ -1,7 +1,9 @@
 import { Button } from "@/components/ui/button";
+import { useLanguage } from "@/contexts/LanguageContext";
 import heroBackground from "@/assets/hero-bg.jpg";
 
 const Hero = () => {
+  const { t } = useLanguage();
   return (
     <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Background */}
@@ -19,26 +21,26 @@ const Hero = () => {
       <div className="relative z-10 text-center max-w-4xl mx-auto px-6">
         <div className="animate-fade-in">
           <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight">
-            Specializujeme se na{" "}
+            {t('hero.title')}{" "}
             <span className="bg-gradient-primary bg-clip-text text-transparent">
-              vývoj software
+              {t('hero.highlight')}
             </span>
           </h1>
           
           <h2 className="text-2xl md:text-3xl font-semibold mb-4 text-muted-foreground">
-            implementaci AI a penetrační testování
+            {t('hero.subtitle')}
           </h2>
           
           <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
-            Máme přes 10 let zkušeností v oboru. Pomůžeme i Vám s inovací Vašeho podnikání.
+            {t('hero.description')}
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button size="lg" className="text-lg px-8 py-6 shadow-elegant">
-              Kontaktujte nás
+              {t('hero.cta')}
             </Button>
             <Button variant="outline" size="lg" className="text-lg px-8 py-6">
-              Naše služby
+              {t('hero.services')}
             </Button>
           </div>
         </div>

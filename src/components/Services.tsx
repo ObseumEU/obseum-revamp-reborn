@@ -1,37 +1,36 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { useLanguage } from "@/contexts/LanguageContext";
 import { Code, Brain, Shield } from "lucide-react";
 
-const services = [
-  {
-    icon: Code,
-    title: "Vývoj software na míru",
-    description: "Každý podnik má své jedinečné potřeby a výzvy, proto se specializujeme na vývoj softwaru, který je přizpůsoben přesně vašim potřebám."
-  },
-  {
-    icon: Brain,
-    title: "Umělá inteligence",
-    description: "Implementujeme umělou inteligenci do podnikových procesů a operací. Rozumíme, že AI je více než jen trend - je to způsob, jak zvýšit efektivitu, inovaci a konkurenceschopnost."
-  },
-  {
-    icon: Shield,
-    title: "Penetrační testování",
-    description: "Najdeme slabá místa ve vašich systémech, aby vaše data a podnikání zůstaly v bezpečí."
-  }
-];
-
 const Services = () => {
+  const { t } = useLanguage();
+
+  const services = [
+    {
+      icon: Code,
+      title: t('services.software.title'),
+      description: t('services.software.desc')
+    },
+    {
+      icon: Brain,
+      title: t('services.ai.title'),
+      description: t('services.ai.desc')
+    },
+    {
+      icon: Shield,
+      title: t('services.security.title'),
+      description: t('services.security.desc')
+    }
+  ];
   return (
     <section id="services" className="py-24 bg-gradient-subtle">
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">
-            S čím vám můžeme{" "}
-            <span className="bg-gradient-primary bg-clip-text text-transparent">
-              pomoci?
-            </span>
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">
+            {t('services.title')}
           </h2>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Nabízíme komplexní služby v oblasti technologií a kybernetické bezpečnosti
+          <p className="text-xl text-muted-foreground">
+            {t('services.subtitle')}
           </p>
         </div>
         
