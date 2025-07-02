@@ -44,6 +44,21 @@ const translations = {
       title: "Trusted by Industry Leaders",
       subtitle: "Partnering with leading enterprises across telecommunications, finance, real estate, and technology sectors"
     },
+    featured: {
+      title: "Featured Solution",
+      subtitle: "Real-world AI innovation delivering measurable business impact",
+      project: {
+        title: "Copyright Analyzer",
+        subtitle: "AI-Powered Content Protection",
+        description: "Automated video analysis system that instantly identifies copyrighted audio content, recognizes artists and distributors, saving 90% analysis time while ensuring full legal compliance.",
+        benefits: {
+          automation: "90% Time Reduction",
+          compliance: "100% Legal Coverage", 
+          integration: "Seamless IT Integration",
+          savings: "Significant Cost Savings"
+        }
+      }
+    },
     footer: {
       description: "Your strategic technology partner for enterprise digital transformation and innovation excellence.",
       services: "Solutions",
@@ -85,6 +100,21 @@ const translations = {
     clients: {
       title: "Důvěra Lídrů Odvětví",
       subtitle: "Spolupráce s předními podniky v telekomunikacích, financích, nemovitostech a technologických sektorech"
+    },
+    featured: {
+      title: "Ukázkové Řešení",
+      subtitle: "Reálná AI inovace přinášející měřitelný obchodní dopad",
+      project: {
+        title: "Copyright Analyzer",
+        subtitle: "AI Ochrana Obsahu",
+        description: "Automatizovaný systém analýzy videí, který okamžitě identifikuje autorsky chráněný audio obsah, rozpozná interprety a distributory, šetří 90% času analýzy při zajištění plné právní compliance.",
+        benefits: {
+          automation: "90% Úspora Času",
+          compliance: "100% Právní Pokrytí",
+          integration: "Bezproblémová IT Integrace", 
+          savings: "Významné Úspory Nákladů"
+        }
+      }
     },
     footer: {
       description: "Váš strategický technologický partner pro podnikovou digitální transformaci a inovační excelenci.",
