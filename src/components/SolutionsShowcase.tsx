@@ -127,8 +127,8 @@ const SolutionsShowcase = () => {
 
         <div className="max-w-7xl mx-auto space-y-12">
           {solutions.map((solution, index) => (
-            <Card key={index} className="bg-gradient-card border-border/30 overflow-hidden group hover:shadow-premium transition-all duration-700">
-              <div className="absolute inset-0 bg-gradient-primary opacity-0 group-hover:opacity-5 transition-opacity duration-700"></div>
+            <Card key={index} className="bg-gradient-card border-border/30 overflow-hidden">
+              <div className="absolute inset-0 bg-gradient-primary opacity-0"></div>
               
               <CardHeader className="relative z-10 pb-8">
                 <div className="flex flex-col lg:flex-row items-start lg:items-center gap-8">
@@ -136,7 +136,7 @@ const SolutionsShowcase = () => {
                     <Badge variant="outline" className="mb-4 border-primary/30 text-primary">
                       {solution.subtitle}
                     </Badge>
-                    <CardTitle className="text-3xl md:text-4xl font-bold mb-4 group-hover:text-primary transition-colors duration-300">
+                    <CardTitle className="text-3xl md:text-4xl font-bold mb-4">
                       {solution.title}
                     </CardTitle>
                     <p className="text-xl text-muted-foreground leading-relaxed mb-6">
@@ -163,7 +163,7 @@ const SolutionsShowcase = () => {
                         return (
                           <div 
                             key={benefitIndex}
-                            className="bg-background/50 backdrop-blur-sm border border-border/30 rounded-xl p-4 text-center group-hover:bg-background/70 transition-all duration-300"
+                            className="bg-background/50 backdrop-blur-sm border border-border/30 rounded-xl p-4 text-center"
                           >
                             <IconComponent className={`h-6 w-6 mx-auto mb-2 ${benefit.color}`} />
                             <p className="text-sm font-medium">{benefit.title}</p>
@@ -180,7 +180,7 @@ const SolutionsShowcase = () => {
                   <div className="flex justify-center">
                     <Button 
                       variant="outline" 
-                      className="border-primary/30 text-primary hover:bg-primary/10 group-hover:border-primary/50 transition-all duration-300"
+                      className="border-primary/30 text-primary hover:bg-primary/10"
                     >
                       {language === 'en' ? "Learn More →" : "Zjistit Více →"}
                     </Button>
