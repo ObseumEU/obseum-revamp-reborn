@@ -41,7 +41,14 @@ const Header = () => {
                   EN
                 </button>
               </div>
-              <Button variant="outline" size="sm">
+              <Button 
+                variant="outline" 
+                size="sm"
+                onClick={() => {
+                  const footer = document.querySelector('footer');
+                  footer?.scrollIntoView({ behavior: 'smooth' });
+                }}
+              >
                 {t('nav.contact')}
               </Button>
             </div>
