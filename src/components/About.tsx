@@ -7,14 +7,15 @@ const About = () => {
   
   const stats = [
     { value: "10+", label: language === 'en' ? "Years Experience" : "Let Zkušeností" },
-    { value: "100+", label: language === 'en' ? "Projects Delivered" : "Dokončených Projektů" },
-    { value: "50+", label: language === 'en' ? "Enterprise Clients" : "Podnikových Klientů" },
-    { value: "24/7", label: language === 'en' ? "Technical Support" : "Technická Podpora" }
+    { value: "AI-First", label: language === 'en' ? "Approach" : "Přístup" },
+    { value: "24/7", label: language === 'en' ? "Technical Support" : "Technická Podpora" },
+    { value: "100%", label: language === 'en' ? "Automation Focus" : "Zaměření na Automatizaci" }
   ];
 
   const technologies = [
-    "React", "TypeScript", "Node.js", "Python", "AWS", "Azure", 
-    "Docker", "Kubernetes", "TensorFlow", "PyTorch", "PostgreSQL", "MongoDB"
+    "Python", "TensorFlow", "PyTorch", "OpenAI", "Azure AI", "AWS SageMaker", 
+    "Machine Learning", "Computer Vision", "NLP", "Docker", "Kubernetes", "REST APIs",
+    "React", "TypeScript", "Node.js", "PostgreSQL", "MongoDB", "Redis"
   ];
 
   return (
@@ -32,12 +33,12 @@ const About = () => {
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
             {language === 'en' ? "Excellence in Enterprise Technology" : "Excellence v Podnikových Technologiích"}
           </h2>
-          <p className="text-xl md:text-2xl text-muted-foreground max-w-4xl mx-auto leading-relaxed">
-            {language === 'en' 
-              ? "We are a leading technology consulting firm specializing in enterprise-grade solutions that transform businesses and drive digital innovation across industries."
-              : "Jsme přední technologická poradenská firma specializující se na podniková řešení, která transformují firmy a řídí digitální inovace napříč odvětvími."
-            }
-          </p>
+            <p className="text-xl md:text-2xl text-muted-foreground max-w-4xl mx-auto leading-relaxed">
+              {language === 'en' 
+                ? "We specialize in AI-driven automation solutions that revolutionize business processes, delivering intelligent systems that reduce manual work by up to 90% while ensuring complete compliance and seamless integration."
+                : "Specializujeme se na AI-řízená automatizační řešení, která revolucionizují obchodní procesy, dodáváme inteligentní systémy, které snižují manuální práci až o 90% při zajištění úplné compliance a bezproblémové integrace."
+              }
+            </p>
         </div>
 
         <div className="grid lg:grid-cols-2 gap-16 items-center mb-20">
@@ -47,8 +48,8 @@ const About = () => {
             </h3>
             <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
               {language === 'en'
-                ? "We combine deep technical expertise with strategic business insight to deliver solutions that not only meet your current needs but position your organization for future growth and success."
-                : "Kombinujeme hluboké technické znalosti se strategickým obchodním pohledem, abychom dodali řešení, která nejen splňují vaše současné potřeby, ale také připravují vaši organizaci na budoucí růst a úspěch."
+                ? "Our AI-first methodology transforms manual processes into intelligent, automated workflows. We leverage cutting-edge machine learning and cloud technologies to create systems that learn, adapt, and continuously optimize your business operations."
+                : "Naše AI-first metodologie transformuje manuální procesy na inteligentní, automatizované pracovní toky. Využíváme nejmodernější strojové učení a cloudové technologie k vytváření systémů, které se učí, přizpůsobují a kontinuálně optimalizují vaše obchodní operace."
               }
             </p>
             <div className="space-y-4">
