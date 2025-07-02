@@ -11,37 +11,57 @@ const Hero = () => {
         <img 
           src={heroBackground} 
           alt="Hero background" 
-          className="w-full h-full object-cover opacity-20"
+          className="w-full h-full object-cover opacity-30"
         />
+        <div className="absolute inset-0 bg-gradient-hero"></div>
         <div className="absolute inset-0 bg-gradient-mesh"></div>
-        <div className="absolute inset-0 bg-background/40"></div>
+        <div className="absolute inset-0 bg-background/60"></div>
       </div>
       
       {/* Content */}
-      <div className="relative z-10 text-center max-w-4xl mx-auto px-6">
+      <div className="relative z-10 text-center max-w-5xl mx-auto px-6">
         <div className="animate-fade-in">
-          <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight">
+          <div className="inline-flex items-center px-4 py-2 rounded-full bg-primary/10 border border-primary/20 mb-8 backdrop-blur-sm">
+            <span className="text-primary font-medium">Enterprise Technology Partner</span>
+          </div>
+          
+          <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold mb-6 leading-tight">
             {t('hero.title')}{" "}
             <span className="bg-gradient-primary bg-clip-text text-transparent">
               {t('hero.highlight')}
             </span>
           </h1>
           
-          <h2 className="text-2xl md:text-3xl font-semibold mb-4 text-muted-foreground">
+          <h2 className="text-2xl md:text-3xl lg:text-4xl font-semibold mb-6 text-muted-foreground">
             {t('hero.subtitle')}
           </h2>
           
-          <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
+          <p className="text-xl md:text-2xl text-muted-foreground mb-10 max-w-3xl mx-auto leading-relaxed">
             {t('hero.description')}
           </p>
           
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" className="text-lg px-8 py-6 shadow-elegant">
+          <div className="flex flex-col sm:flex-row gap-6 justify-center mb-12">
+            <Button size="lg" className="text-lg px-10 py-7 shadow-elegant hover:shadow-glow transition-all duration-300 hover:scale-105">
               {t('hero.cta')}
             </Button>
-            <Button variant="outline" size="lg" className="text-lg px-8 py-6">
+            <Button variant="outline" size="lg" className="text-lg px-10 py-7 backdrop-blur-sm">
               {t('hero.services')}
             </Button>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-16 text-center">
+            <div className="p-6">
+              <div className="text-3xl font-bold text-primary mb-2">50+</div>
+              <div className="text-muted-foreground">Enterprise Projects</div>
+            </div>
+            <div className="p-6">
+              <div className="text-3xl font-bold text-primary mb-2">99.9%</div>
+              <div className="text-muted-foreground">System Uptime</div>
+            </div>
+            <div className="p-6">
+              <div className="text-3xl font-bold text-primary mb-2">24/7</div>
+              <div className="text-muted-foreground">Technical Support</div>
+            </div>
           </div>
         </div>
       </div>

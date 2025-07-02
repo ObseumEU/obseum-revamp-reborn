@@ -40,20 +40,26 @@ const Services = () => {
             return (
               <Card 
                 key={index} 
-                className="relative group hover:shadow-card-hover transition-all duration-300 hover:-translate-y-1 border-border/50 bg-card/80 backdrop-blur-sm"
+                className="relative group hover:shadow-premium transition-all duration-500 hover:-translate-y-2 border-border/50 bg-gradient-card backdrop-blur-sm overflow-hidden"
               >
-                <CardHeader>
-                  <div className="w-12 h-12 bg-gradient-primary rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
-                    <IconComponent className="h-6 w-6 text-primary-foreground" />
+                <div className="absolute inset-0 bg-gradient-primary opacity-0 group-hover:opacity-5 transition-opacity duration-500"></div>
+                <CardHeader className="relative">
+                  <div className="w-16 h-16 bg-gradient-primary rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 group-hover:rotate-3 transition-all duration-500 shadow-glow">
+                    <IconComponent className="h-8 w-8 text-primary-foreground" />
                   </div>
-                  <CardTitle className="text-xl font-semibold text-card-foreground">
+                  <CardTitle className="text-2xl font-bold text-card-foreground mb-4 group-hover:text-primary transition-colors duration-300">
                     {service.title}
                   </CardTitle>
                 </CardHeader>
-                <CardContent>
-                  <p className="text-muted-foreground leading-relaxed">
+                <CardContent className="relative">
+                  <p className="text-muted-foreground leading-relaxed text-lg">
                     {service.description}
                   </p>
+                  <div className="mt-6 pt-4 border-t border-border/30">
+                    <div className="text-sm text-primary font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                      Learn More →
+                    </div>
+                  </div>
                 </CardContent>
               </Card>
             );

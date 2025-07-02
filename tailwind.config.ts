@@ -70,15 +70,20 @@ export default {
 			},
 			backgroundImage: {
 				'gradient-primary': 'var(--gradient-primary)',
+				'gradient-hero': 'var(--gradient-hero)',
 				'gradient-subtle': 'var(--gradient-subtle)',
-				'gradient-mesh': 'var(--gradient-mesh)'
+				'gradient-mesh': 'var(--gradient-mesh)',
+				'gradient-card': 'var(--gradient-card)'
 			},
 			boxShadow: {
 				'elegant': 'var(--shadow-elegant)',
-				'card-hover': 'var(--shadow-card)'
+				'card-hover': 'var(--shadow-card)',
+				'glow': 'var(--shadow-glow)',
+				'premium': 'var(--shadow-premium)'
 			},
 			transitionTimingFunction: {
-				'smooth': 'var(--transition-smooth)'
+				'smooth': 'var(--transition-smooth)',
+				'bounce': 'var(--transition-bounce)'
 			},
 			keyframes: {
 				'accordion-down': {
