@@ -1,5 +1,5 @@
 import { useLanguage } from "@/contexts/LanguageContext";
-import cancomLogo from "@/assets/cancom-logo.svg";
+import cancomLogo from "@/assets/Cancom_logo_bw.svg";
 import o2Logo from "@/assets/O2-Logo-9.svg";
 import heimLogo from "@/assets/HEIM.svg";
 import homeCreditLogo from "@/assets/Home_Credit__Finance_Bank.svg";
@@ -13,7 +13,7 @@ const clients = [
   { name: "Heimstaden", logo: heimLogo },
   { name: "Home Credit", logo: "Home Credit" },
   { name: "Innogy", logo: innogyLogo },
-  { name: "Cancom", logo: "Cancom" },
+  { name: "Cancom", logo: cancomLogo },
   { name: "MycroftMind", logo: mycroftmindLogo },
   { name: "Mafra", logo: "Mafra" }
 ];
