@@ -1,4 +1,5 @@
 import { useLanguage } from "@/contexts/LanguageContext";
+import cancomLogo from "@/assets/cancom-logo.svg";
 
 const clients = [
   { name: "O2", logo: "O₂" },
@@ -6,16 +7,7 @@ const clients = [
   { name: "Heimstaden", logo: "Heimstaden" },
   { name: "Home Credit", logo: "Home Credit" },
   { name: "Innogy", logo: "Innogy" },
-  { 
-    name: "Cancom", 
-    logo: (
-      <svg width="80" height="32" viewBox="0 0 80 32" className="fill-current">
-        <circle cx="16" cy="16" r="12" className="fill-primary/20"/>
-        <rect x="6" y="6" width="20" height="20" rx="4" className="fill-primary/40"/>
-        <text x="35" y="20" className="fill-current text-sm font-bold">CANCOM</text>
-      </svg>
-    )
-  },
+  { name: "Cancom", logo: cancomLogo },
   { name: "Mafra", logo: "Mafra" }
 ];
 
@@ -42,20 +34,22 @@ const ClientLogos = () => {
               key={index}
               className="flex items-center justify-center h-24 w-full p-6 rounded-2xl bg-gradient-card border border-border/30"
             >
-              {typeof client.logo === 'string' && client.logo.startsWith('http') ? (
+              {client.logo.startsWith('http') ? (
                 <img 
                   src={client.logo} 
                   alt={client.name}
                   className="max-w-full max-h-12 w-auto object-contain opacity-60"
                 />
-              ) : typeof client.logo === 'string' ? (
+              ) : client.logo.endsWith('.svg') ? (
+                <img 
+                  src={client.logo} 
+                  alt={client.name}
+                  className="max-w-full max-h-12 w-auto object-contain opacity-60 text-muted-foreground"
+                />
+              ) : (
                 <span className="text-lg md:text-xl font-bold text-muted-foreground text-center">
                   {client.logo}
                 </span>
-              ) : (
-                <div className="opacity-60 text-muted-foreground">
-                  {client.logo}
-                </div>
               )}
             </div>
           ))}

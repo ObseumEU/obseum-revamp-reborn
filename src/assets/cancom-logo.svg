@@ -1,0 +1,5 @@
+<svg width="80" height="32" viewBox="0 0 80 32" xmlns="http://www.w3.org/2000/svg">
+  <circle cx="16" cy="16" r="12" fill="currentColor" opacity="0.2"/>
+  <rect x="6" y="6" width="20" height="20" rx="4" fill="currentColor" opacity="0.4"/>
+  <text x="35" y="20" fill="currentColor" class="text-sm font-bold">CANCOM</text>
+</svg>
