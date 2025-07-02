@@ -5,6 +5,7 @@ import heimLogo from "@/assets/HEIM.svg";
 import homeCreditLogo from "@/assets/Home_Credit__Finance_Bank.svg";
 import innogyLogo from "@/assets/Innogy_Logo.svg";
 import csobLogo from "@/assets/csob-1.svg";
+import mycroftmindLogo from "@/assets/mycroftmind.svg";
 
 const clients = [
   { name: "O2", logo: o2Logo },
@@ -13,7 +14,7 @@ const clients = [
   { name: "Home Credit", logo: "Home Credit" },
   { name: "Innogy", logo: innogyLogo },
   { name: "Cancom", logo: "Cancom" },
-  { name: "MycroftMind", logo: "MycroftMind" },
+  { name: "MycroftMind", logo: mycroftmindLogo },
   { name: "Mafra", logo: "Mafra" }
 ];
 
