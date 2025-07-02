@@ -47,13 +47,13 @@ const ClientLogos = () => {
                   <img 
                     src={client.logo} 
                     alt={client.name}
-                    className="max-h-12 w-auto object-contain opacity-65 group-hover:opacity-90 transition-opacity duration-300 grayscale group-hover:grayscale-0"
+                    className="max-h-12 w-auto object-contain opacity-75 group-hover:opacity-100 transition-all duration-300 filter brightness-0 invert-[0.7] group-hover:invert-[0.8]"
                   />
                 ) : client.logo.endsWith('.svg') ? (
                   <img 
                     src={client.logo} 
                     alt={client.name}
-                    className="max-h-12 w-auto object-contain opacity-65 group-hover:opacity-90 transition-opacity duration-300 grayscale group-hover:grayscale-0"
+                    className="max-h-12 w-auto object-contain opacity-75 group-hover:opacity-100 transition-all duration-300 filter brightness-0 invert-[0.7] group-hover:invert-[0.8]"
                   />
                 ) : (
                   <span className="text-lg font-medium text-muted-foreground/60 group-hover:text-muted-foreground/90 transition-colors duration-300 tracking-wide">
@@ -72,13 +72,13 @@ const ClientLogos = () => {
                   <img 
                     src={client.logo} 
                     alt={client.name}
-                    className="max-h-12 w-auto object-contain opacity-65 group-hover:opacity-90 transition-opacity duration-300 grayscale group-hover:grayscale-0"
+                    className="max-h-12 w-auto object-contain opacity-75 group-hover:opacity-100 transition-all duration-300 filter brightness-0 invert-[0.7] group-hover:invert-[0.8]"
                   />
                 ) : client.logo.endsWith('.svg') ? (
                   <img 
                     src={client.logo} 
                     alt={client.name}
-                    className="max-h-12 w-auto object-contain opacity-65 group-hover:opacity-90 transition-opacity duration-300 grayscale group-hover:grayscale-0"
+                    className="max-h-12 w-auto object-contain opacity-75 group-hover:opacity-100 transition-all duration-300 filter brightness-0 invert-[0.7] group-hover:invert-[0.8]"
                   />
                 ) : (
                   <span className="text-lg font-medium text-muted-foreground/60 group-hover:text-muted-foreground/90 transition-colors duration-300 tracking-wide">
