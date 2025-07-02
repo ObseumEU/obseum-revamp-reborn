@@ -176,16 +176,6 @@ const SolutionsShowcase = () => {
               </CardHeader>
 
               <CardContent className="relative z-10 pt-0">
-                <div className="border-t border-border/30 pt-6">
-                  <div className="flex justify-center">
-                    <Button 
-                      variant="outline" 
-                      className="border-primary/30 text-primary hover:bg-primary/10"
-                    >
-                      {language === 'en' ? "Learn More →" : "Zjistit Více →"}
-                    </Button>
-                  </div>
-                </div>
               </CardContent>
             </Card>
           ))}
