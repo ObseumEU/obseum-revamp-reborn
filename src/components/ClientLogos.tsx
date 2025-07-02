@@ -31,16 +31,16 @@ const ClientLogos = () => {
           {clients.map((client, index) => (
             <div 
               key={index}
-              className="group flex items-center justify-center p-8 rounded-2xl bg-gradient-card border border-border/30 hover:border-primary/30 hover:shadow-glow transition-all duration-500 hover:-translate-y-1"
+              className="group flex items-center justify-center h-24 w-full p-6 rounded-2xl bg-gradient-card border border-border/30 hover:border-primary/30 hover:shadow-glow transition-all duration-500 hover:-translate-y-1"
             >
               {client.logo.startsWith('http') ? (
                 <img 
                   src={client.logo} 
                   alt={client.name}
-                  className="max-w-full max-h-16 object-contain opacity-60 group-hover:opacity-100 transition-all duration-300 group-hover:scale-110"
+                  className="max-w-full max-h-12 w-auto object-contain opacity-60 group-hover:opacity-100 transition-all duration-300 group-hover:scale-110"
                 />
               ) : (
-                <span className="text-xl md:text-2xl font-bold text-muted-foreground group-hover:text-primary transition-all duration-300 group-hover:scale-110">
+                <span className="text-lg md:text-xl font-bold text-muted-foreground group-hover:text-primary transition-all duration-300 group-hover:scale-110 text-center">
                   {client.logo}
                 </span>
               )}
