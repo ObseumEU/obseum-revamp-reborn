@@ -40,13 +40,29 @@ const Hero = () => {
             {t('hero.description')}
           </p>
           
-          <div className="flex flex-col sm:flex-row gap-6 justify-center mb-12">
-            <Button size="lg" className="text-lg px-10 py-7 shadow-elegant hover:shadow-glow transition-all duration-300 hover:scale-105">
-              {t('hero.cta')}
-            </Button>
-            <Button variant="outline" size="lg" className="text-lg px-10 py-7 backdrop-blur-sm">
-              {t('hero.services')}
-            </Button>
+          <div className="flex flex-col items-center gap-8 justify-center mb-12">
+            <div className="bg-gradient-card border border-border/30 rounded-2xl p-8 backdrop-blur-sm max-w-lg">
+              <h3 className="text-2xl font-bold mb-6 text-center">Contact Information</h3>
+              <div className="space-y-4 text-left">
+                <div className="flex items-center gap-3">
+                  <span className="text-primary font-semibold">Phone:</span>
+                  <a href="tel:+420724676829" className="hover:text-primary transition-colors">+420 724 676 829</a>
+                </div>
+                <div className="flex items-center gap-3">
+                  <span className="text-primary font-semibold">Email:</span>
+                  <a href="mailto:info@obseum.cz" className="hover:text-primary transition-colors">info@obseum.cz</a>
+                </div>
+                <div className="pt-4 border-t border-border/30">
+                  <div className="text-sm text-muted-foreground space-y-1">
+                    <p><strong>Obseum s.r.o.</strong></p>
+                    <p>IČO: 07098308</p>
+                    <p>DIČ: CZ07098308</p>
+                    <p>Datová schránka: 7xm8rjr</p>
+                    <p>Rybná 716/24, Staré Město, 110 00 Praha</p>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-16 text-center">
