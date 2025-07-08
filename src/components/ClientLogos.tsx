@@ -32,13 +32,10 @@ const ClientLogos = () => {
         </div>
         
         <div className="relative overflow-hidden">
-          {/* Fixed fade overlays */}
           <div className="absolute left-0 top-0 bottom-0 w-12 bg-gradient-to-r from-background to-transparent z-10 pointer-events-none"></div>
           <div className="absolute right-0 top-0 bottom-0 w-12 bg-gradient-to-l from-background to-transparent z-10 pointer-events-none"></div>
           
-          {/* Clean scrolling container */}
           <div className="flex animate-[scroll_70s_linear_infinite] items-center">
-            {/* First set */}
             {clients.map((client, index) => (
               <div 
                 key={`first-${index}`}
@@ -51,7 +48,6 @@ const ClientLogos = () => {
                 />
               </div>
             ))}
-            {/* Duplicate set */}
             {clients.map((client, index) => (
               <div 
                 key={`second-${index}`}
