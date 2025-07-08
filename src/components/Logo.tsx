@@ -1,9 +1,11 @@
 
+import logoImage from "@/assets/ObseumLogoWhite.png";
+
 const Logo = ({ className = "" }: { className?: string }) => {
   return (
     <div className={`${className}`}>
       <img 
-        src="/src/assets/ObseumLogoWhite.png" 
+        src={logoImage} 
         alt="Obseum" 
         className="h-8 w-auto"
       />
