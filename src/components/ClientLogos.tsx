@@ -21,8 +21,6 @@ const clients = [
 
 const ClientLogos = () => {
   const { t } = useLanguage();
-  console.log('Client title:', t('clients.title'));
-  console.log('Language:', useLanguage().language);
   return (
     <section className="py-20 bg-background/95 backdrop-blur-sm">
       <div className="container mx-auto px-6">
@@ -46,23 +44,11 @@ const ClientLogos = () => {
                 key={`first-${index}`}
                 className="flex items-center justify-center h-20 w-48 flex-shrink-0 mx-8 group cursor-default"
               >
-                {client.logo.startsWith('http') ? (
-                  <img 
-                    src={client.logo} 
-                    alt={client.name}
-                    className="max-h-12 w-auto object-contain opacity-75 group-hover:opacity-100 transition-all duration-300 filter brightness-0 invert-[0.7] group-hover:invert-[0.8]"
-                  />
-                ) : client.logo.endsWith('.svg') ? (
-                  <img 
-                    src={client.logo} 
-                    alt={client.name}
-                    className="max-h-12 w-auto object-contain opacity-75 group-hover:opacity-100 transition-all duration-300 filter brightness-0 invert-[0.7] group-hover:invert-[0.8]"
-                  />
-                ) : (
-                  <span className="text-lg font-medium text-muted-foreground/60 group-hover:text-muted-foreground/90 transition-colors duration-300 tracking-wide">
-                    {client.logo}
-                  </span>
-                )}
+                <img 
+                  src={client.logo} 
+                  alt={client.name}
+                  className="max-h-12 w-auto object-contain opacity-75 group-hover:opacity-100 transition-all duration-300 filter brightness-0 invert-[0.7] group-hover:invert-[0.8]"
+                />
               </div>
             ))}
             {/* Duplicate set */}
@@ -71,23 +57,11 @@ const ClientLogos = () => {
                 key={`second-${index}`}
                 className="flex items-center justify-center h-20 w-48 flex-shrink-0 mx-8 group cursor-default"
               >
-                {client.logo.startsWith('http') ? (
-                  <img 
-                    src={client.logo} 
-                    alt={client.name}
-                    className="max-h-12 w-auto object-contain opacity-75 group-hover:opacity-100 transition-all duration-300 filter brightness-0 invert-[0.7] group-hover:invert-[0.8]"
-                  />
-                ) : client.logo.endsWith('.svg') ? (
-                  <img 
-                    src={client.logo} 
-                    alt={client.name}
-                    className="max-h-12 w-auto object-contain opacity-75 group-hover:opacity-100 transition-all duration-300 filter brightness-0 invert-[0.7] group-hover:invert-[0.8]"
-                  />
-                ) : (
-                  <span className="text-lg font-medium text-muted-foreground/60 group-hover:text-muted-foreground/90 transition-colors duration-300 tracking-wide">
-                    {client.logo}
-                  </span>
-                )}
+                <img 
+                  src={client.logo} 
+                  alt={client.name}
+                  className="max-h-12 w-auto object-contain opacity-75 group-hover:opacity-100 transition-all duration-300 filter brightness-0 invert-[0.7] group-hover:invert-[0.8]"
+                />
               </div>
             ))}
           </div>
