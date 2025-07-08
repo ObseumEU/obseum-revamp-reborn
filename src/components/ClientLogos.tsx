@@ -21,6 +21,8 @@ const clients = [
 
 const ClientLogos = () => {
   const { t } = useLanguage();
+  console.log('Client title:', t('clients.title'));
+  console.log('Language:', useLanguage().language);
   return (
     <section className="py-20 bg-background/95 backdrop-blur-sm">
       <div className="container mx-auto px-6">
