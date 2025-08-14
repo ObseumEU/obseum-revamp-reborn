@@ -35,7 +35,7 @@ const ClientLogos = () => {
           <div className="absolute left-0 top-0 bottom-0 w-6 sm:w-12 bg-gradient-to-r from-background to-transparent z-10 pointer-events-none"></div>
           <div className="absolute right-0 top-0 bottom-0 w-6 sm:w-12 bg-gradient-to-l from-background to-transparent z-10 pointer-events-none"></div>
           
-          <div className="flex animate-[scroll_70s_linear_infinite] will-change-transform items-center">
+          <div className="flex animate-[scroll_50s_linear_infinite] md:animate-[scroll_70s_linear_infinite] will-change-transform items-center">
             {clients.map((client, index) => (
               <div 
                 key={`first-${index}`}
