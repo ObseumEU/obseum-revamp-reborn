@@ -1,7 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { useLanguage } from "@/contexts/LanguageContext";
-import { Sparkles, ArrowRight } from "lucide-react";
-import heroBackground from "@/assets/hero-bg.jpg";
+import { ArrowRight } from "lucide-react";
 
 const Hero = () => {
   const { t } = useLanguage();
@@ -11,73 +10,77 @@ const Hero = () => {
   };
 
   return (
-    <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden pt-24">
-      <div className="absolute inset-0">
-        <img src={heroBackground} alt="" className="w-full h-full object-cover opacity-20" />
-        <div className="absolute inset-0 bg-gradient-hero"></div>
-        <div className="absolute inset-0 bg-gradient-mesh"></div>
-        <div className="absolute inset-0 bg-background/70"></div>
-      </div>
+    <section
+      id="home"
+      className="relative min-h-screen flex items-center justify-center overflow-hidden pt-32 pb-24"
+    >
+      {/* Ambient backdrop */}
+      <div className="absolute inset-0 bg-gradient-hero pointer-events-none" />
+      <div className="absolute inset-0 bg-grid opacity-40 [mask-image:radial-gradient(ellipse_60%_50%_at_50%_30%,black,transparent)]" />
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[1100px] h-[600px] bg-primary/10 blur-[140px] rounded-full pointer-events-none" />
 
       <div className="relative z-10 text-center max-w-5xl mx-auto px-6">
         <div className="animate-fade-in">
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 mb-8 backdrop-blur-sm">
-            <Sparkles className="h-4 w-4 text-primary" />
-            <span className="text-primary font-medium text-sm">{t('hero.badge')}</span>
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-primary/30 bg-primary/10 text-primary text-[11px] font-bold tracking-widest uppercase mb-10">
+            <span className="w-1.5 h-1.5 rounded-full bg-primary animate-pulse" />
+            {t("hero.badge")}
           </div>
 
-          <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold mb-6 leading-[1.05] tracking-tight">
-            {t('hero.title')}{" "}
-            <span className="bg-gradient-primary bg-clip-text text-transparent">
-              {t('hero.highlight')}
+          <h1 className="text-6xl md:text-7xl lg:text-8xl font-bold mb-8 leading-[0.95] tracking-tightest text-balance">
+            <span className="text-foreground">{t("hero.title")}</span>{" "}
+            <span className="bg-clip-text text-transparent bg-gradient-to-b from-foreground to-muted-foreground">
+              {t("hero.highlight")}
             </span>
           </h1>
 
-          <p className="text-xl md:text-2xl text-muted-foreground mb-4 max-w-3xl mx-auto font-medium">
-            {t('hero.subtitle')}
+          <p className="text-lg md:text-xl text-muted-foreground mb-4 max-w-2xl mx-auto leading-relaxed">
+            {t("hero.subtitle")}
           </p>
-          <p className="text-base md:text-lg text-muted-foreground/80 mb-10 max-w-2xl mx-auto leading-relaxed">
-            {t('hero.description')}
+          <p className="text-base text-muted-foreground/70 mb-12 max-w-2xl mx-auto leading-relaxed">
+            {t("hero.description")}
           </p>
 
-          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
+          <div className="flex flex-col sm:flex-row gap-3 justify-center mb-24">
             <Button
               size="lg"
-              onClick={() => scrollTo('contact')}
-              className="text-base px-8 py-6 shadow-elegant hover:shadow-glow transition-all duration-300"
+              onClick={() => scrollTo("contact")}
+              className="text-sm px-8 py-6 rounded-xl shadow-elegant hover:shadow-glow transition-all duration-300 font-bold"
             >
-              {t('hero.ctaPrimary')}
+              {t("hero.ctaPrimary")}
               <ArrowRight className="ml-2 h-4 w-4" />
             </Button>
             <Button
               size="lg"
               variant="outline"
-              onClick={() => scrollTo('process')}
-              className="text-base px-8 py-6"
+              onClick={() => scrollTo("process")}
+              className="text-sm px-8 py-6 rounded-xl font-bold bg-secondary/40 border-border hover:bg-secondary"
             >
-              {t('hero.ctaSecondary')}
+              {t("hero.ctaSecondary")}
             </Button>
           </div>
 
-          <div className="grid grid-cols-3 gap-4 md:gap-8 max-w-2xl mx-auto">
-            <div>
-              <div className="text-2xl md:text-4xl font-bold text-primary mb-1">50+</div>
-              <div className="text-xs md:text-sm text-muted-foreground">{t('hero.stat1')}</div>
+          <div className="grid grid-cols-3 gap-6 md:gap-12 max-w-3xl mx-auto pt-12 border-t border-border/60">
+            <div className="text-left md:text-center">
+              <div className="text-3xl md:text-5xl font-bold tracking-tight mb-2">50+</div>
+              <div className="text-[10px] md:text-xs uppercase tracking-[0.2em] text-muted-foreground font-bold">
+                {t("hero.stat1")}
+              </div>
             </div>
-            <div>
-              <div className="text-2xl md:text-4xl font-bold text-primary mb-1">70%</div>
-              <div className="text-xs md:text-sm text-muted-foreground">{t('hero.stat2')}</div>
+            <div className="text-left md:text-center">
+              <div className="text-3xl md:text-5xl font-bold tracking-tight mb-2">70%</div>
+              <div className="text-[10px] md:text-xs uppercase tracking-[0.2em] text-muted-foreground font-bold">
+                {t("hero.stat2")}
+              </div>
             </div>
-            <div>
-              <div className="text-2xl md:text-4xl font-bold text-primary mb-1">40+</div>
-              <div className="text-xs md:text-sm text-muted-foreground">{t('hero.stat3')}</div>
+            <div className="text-left md:text-center">
+              <div className="text-3xl md:text-5xl font-bold tracking-tight mb-2">40+</div>
+              <div className="text-[10px] md:text-xs uppercase tracking-[0.2em] text-muted-foreground font-bold">
+                {t("hero.stat3")}
+              </div>
             </div>
           </div>
         </div>
       </div>
-
-      <div className="absolute top-1/4 left-1/4 w-4 h-4 bg-primary rounded-full animate-float opacity-60"></div>
-      <div className="absolute top-3/4 right-1/4 w-6 h-6 bg-accent rounded-full animate-float opacity-40" style={{ animationDelay: '2s' }}></div>
     </section>
   );
 };
