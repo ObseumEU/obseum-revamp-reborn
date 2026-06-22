@@ -189,7 +189,7 @@ const translations = {
       stat3: "Happy clients",
     },
     clients: {
-      title: "Trusted by leaders across industries",
+      title: "Our happy clients",
     },
     services: {
       eyebrow: "What we do",
