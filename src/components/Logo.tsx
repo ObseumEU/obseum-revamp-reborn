@@ -10,7 +10,7 @@ const Logo = ({ className = "" }: { className?: string }) => {
         width="140"
         height="32"
         className="h-8 w-auto"
-        fetchpriority="high"
+        fetchPriority="high"
         decoding="async"
       />
     </div>
