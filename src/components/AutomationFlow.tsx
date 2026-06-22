@@ -1,28 +1,32 @@
 import { useLanguage } from "@/contexts/LanguageContext";
-import { Mail, Filter, Brain, Database, Send, CheckCircle2 } from "lucide-react";
+import { Coffee, Frown, Smile, Clock, Mail, FileText, Phone, CheckCircle2, AlertTriangle } from "lucide-react";
 
-const nodes = [
-  { Icon: Mail, label: "Trigger", sub: "Nový e-mail / form", color: "primary" },
-  { Icon: Filter, label: "Filter", sub: "Kategorie + priorita", color: "primary" },
-  { Icon: Brain, label: "AI", sub: "Klasifikace + návrh", color: "accent" },
-  { Icon: Database, label: "CRM", sub: "Vytvoř / aktualizuj lead", color: "primary" },
-  { Icon: Send, label: "Reply", sub: "Personalizovaná odpověď", color: "accent" },
-  { Icon: CheckCircle2, label: "Done", sub: "Slack notifikace", color: "primary" },
+const before = [
+  { time: "08:00", Icon: Mail, text: "47 nových e-mailů ve schránce. Kde začít?" },
+  { time: "10:30", Icon: FileText, text: "Hledání informace ke smlouvě v deseti složkách." },
+  { time: "13:00", Icon: Phone, text: "Zákazník volá podruhé — odpověď se ztratila." },
+  { time: "16:00", Icon: AlertTriangle, text: "Poptávka z webu zapadla. Konkurence ji vzala." },
+  { time: "19:00", Icon: Clock, text: "Práce přetekla do večera. Zase." },
+];
+
+const after = [
+  { time: "08:00", Icon: Coffee, text: "Ranní káva a krátký přehled: 3 věci, které opravdu potřebují vás." },
+  { time: "10:30", Icon: CheckCircle2, text: "Smlouva najetá za 4 vteřiny — stačil jeden dotaz." },
+  { time: "13:00", Icon: Smile, text: "Zákazník už má odpověď. Volá poděkovat." },
+  { time: "16:00", Icon: Mail, text: "Nová poptávka? Už je v CRM a obchodník má brief." },
+  { time: "19:00", Icon: Clock, text: "Domů včas. K dětem, na trénink, na vás." },
 ];
 
 const AutomationFlow = () => {
   const { t } = useLanguage();
 
   return (
-    <section className="relative py-24 md:py-32 bg-gradient-subtle overflow-hidden">
-      <div className="absolute inset-0 bg-dots opacity-30 mask-radial" />
+    <section className="relative py-24 md:py-32 overflow-hidden">
+      <div className="absolute inset-0 bg-gradient-subtle" />
       <div className="container mx-auto px-6 relative z-10">
         <div className="text-center mb-16 max-w-3xl mx-auto">
           <span className="inline-flex items-center gap-2 text-[11px] font-bold uppercase tracking-[0.25em] text-primary mb-5">
-            <span
-              className="w-1.5 h-1.5 rounded-full animate-pulse"
-              style={{ background: "hsl(var(--accent))" }}
-            />
+            <span className="w-1.5 h-1.5 rounded-full bg-accent animate-pulse" />
             {t("flow.eyebrow")}
           </span>
           <h2 className="text-4xl md:text-6xl font-bold tracking-tightest mb-6 text-balance">
@@ -32,90 +36,72 @@ const AutomationFlow = () => {
           <p className="text-lg text-muted-foreground">{t("flow.subtitle")}</p>
         </div>
 
-        <div className="relative max-w-6xl mx-auto glass rounded-3xl p-6 md:p-10 shadow-premium">
-          <div className="flex items-center justify-between mb-8 pb-4 border-b border-border/40">
-            <div className="flex items-center gap-2">
-              <span className="w-2.5 h-2.5 rounded-full bg-destructive/70" />
-              <span className="w-2.5 h-2.5 rounded-full bg-yellow-400/70" />
-              <span className="w-2.5 h-2.5 rounded-full bg-primary/70" />
-              <span className="ml-3 font-mono text-xs text-muted-foreground">
-                workflow.lead-intake.json
-              </span>
-            </div>
-            <span className="text-[10px] font-mono text-primary flex items-center gap-2">
-              <span className="w-1.5 h-1.5 rounded-full bg-primary animate-pulse" />
-              LIVE · 1,284 runs / 24h
-            </span>
-          </div>
-
-          <div className="grid grid-cols-2 md:grid-cols-6 gap-3 md:gap-2 relative">
-            <svg
-              className="absolute top-8 left-0 right-0 w-full h-2 hidden md:block pointer-events-none"
-              preserveAspectRatio="none"
-              viewBox="0 0 600 8"
-            >
-              <defs>
-                <linearGradient id="pipeGrad" x1="0" x2="1">
-                  <stop offset="0%" stopColor="hsl(190 95% 55%)" />
-                  <stop offset="100%" stopColor="hsl(265 90% 65%)" />
-                </linearGradient>
-              </defs>
-              <line x1="0" y1="4" x2="600" y2="4" stroke="hsl(var(--border))" strokeWidth="1" />
-              <line
-                x1="0"
-                y1="4"
-                x2="600"
-                y2="4"
-                stroke="url(#pipeGrad)"
-                strokeWidth="2"
-                strokeDasharray="12 8"
-                className="animate-dash-flow"
-              />
-            </svg>
-
-            {nodes.map(({ Icon, label, sub, color }, i) => (
-              <div
-                key={label}
-                className="relative flex flex-col items-center text-center"
-                style={{ animation: `reveal-up 0.5s ${i * 0.08}s both` }}
-              >
-                <div
-                  className={`relative w-16 h-16 rounded-2xl glass flex items-center justify-center mb-3 hover:scale-110 transition-transform ${
-                    color === "accent" ? "shadow-glow-violet" : "shadow-glow"
-                  }`}
-                >
-                  <Icon
-                    className="h-6 w-6"
-                    style={{
-                      color: color === "accent" ? "hsl(var(--accent))" : "hsl(var(--primary))",
-                    }}
-                  />
-                  <span className="absolute -top-2 -right-2 w-5 h-5 rounded-full bg-background border border-border flex items-center justify-center text-[9px] font-mono text-muted-foreground">
-                    {i + 1}
-                  </span>
-                </div>
-                <div className="font-bold text-sm">{label}</div>
-                <div className="text-[10px] text-muted-foreground mt-0.5 leading-tight">{sub}</div>
+        <div className="grid md:grid-cols-2 gap-6 max-w-6xl mx-auto">
+          {/* BEFORE */}
+          <div className="glass rounded-3xl p-7 md:p-9 relative overflow-hidden">
+            <div className="flex items-center gap-3 mb-7 pb-5 border-b border-border/40">
+              <div className="w-11 h-11 rounded-xl bg-destructive/10 border border-destructive/20 flex items-center justify-center">
+                <Frown className="h-5 w-5 text-destructive" />
               </div>
-            ))}
+              <div>
+                <div className="text-[10px] uppercase tracking-[0.25em] text-muted-foreground font-bold">Bez AI</div>
+                <div className="text-lg font-bold">Běžný úterý ve firmě</div>
+              </div>
+            </div>
+            <div className="space-y-4">
+              {before.map(({ time, Icon, text }, i) => (
+                <div
+                  key={i}
+                  className="flex items-start gap-4 group"
+                  style={{ animation: `reveal-up 0.5s ${i * 0.08}s both` }}
+                >
+                  <div className="text-[11px] font-bold text-muted-foreground w-12 pt-2 shrink-0">{time}</div>
+                  <div className="w-9 h-9 rounded-lg bg-background/60 border border-border flex items-center justify-center shrink-0">
+                    <Icon className="h-4 w-4 text-muted-foreground" />
+                  </div>
+                  <div className="text-sm text-foreground/80 pt-1.5 leading-relaxed">{text}</div>
+                </div>
+              ))}
+            </div>
           </div>
 
-          <div className="mt-10 rounded-xl bg-background/60 border border-border/40 p-4 font-mono text-[11px] leading-relaxed">
-            <div className="text-muted-foreground/70">
-              <span className="text-primary">›</span> trigger.email.received{" "}
-              <span className="text-muted-foreground/40">→ 142ms</span>
+          {/* AFTER */}
+          <div className="glass rounded-3xl p-7 md:p-9 relative overflow-hidden shadow-glow border-primary/20">
+            <div className="absolute -top-20 -right-20 w-64 h-64 bg-primary/10 rounded-full blur-3xl pointer-events-none" />
+            <div className="flex items-center gap-3 mb-7 pb-5 border-b border-border/40 relative">
+              <div className="w-11 h-11 rounded-xl bg-primary/10 border border-primary/30 flex items-center justify-center">
+                <Smile className="h-5 w-5 text-primary" />
+              </div>
+              <div>
+                <div className="text-[10px] uppercase tracking-[0.25em] text-primary font-bold">S AI pomocníkem</div>
+                <div className="text-lg font-bold">Stejné úterý, jiný klid</div>
+              </div>
             </div>
-            <div className="text-muted-foreground/70">
-              <span className="text-primary">›</span> ai.classify("urgent", "lead", confidence=0.94)
+            <div className="space-y-4 relative">
+              {after.map(({ time, Icon, text }, i) => (
+                <div
+                  key={i}
+                  className="flex items-start gap-4 group"
+                  style={{ animation: `reveal-up 0.5s ${0.2 + i * 0.08}s both` }}
+                >
+                  <div className="text-[11px] font-bold text-primary w-12 pt-2 shrink-0">{time}</div>
+                  <div className="w-9 h-9 rounded-lg bg-primary/10 border border-primary/30 flex items-center justify-center shrink-0">
+                    <Icon className="h-4 w-4 text-primary" />
+                  </div>
+                  <div className="text-sm text-foreground/90 pt-1.5 leading-relaxed">{text}</div>
+                </div>
+              ))}
             </div>
-            <div className="text-muted-foreground/70">
-              <span className="text-primary">›</span> crm.lead.create{" "}
-              <span className="text-primary">✓</span> id=lead_8421
-            </div>
-            <div style={{ color: "hsl(var(--accent-glow))" }}>
-              <span>›</span> reply.sent <span className="text-primary">✓</span> · pipeline complete in{" "}
-              <b>2.1s</b>
-            </div>
+          </div>
+        </div>
+
+        <div className="mt-10 text-center">
+          <div className="inline-flex items-center gap-3 glass rounded-full px-6 py-3">
+            <Clock className="h-4 w-4 text-primary" />
+            <span className="text-sm">
+              <b className="text-gradient">+ 12 hodin týdně</b>
+              <span className="text-muted-foreground"> — průměrná úspora našich klientů po prvním měsíci</span>
+            </span>
           </div>
         </div>
       </div>
