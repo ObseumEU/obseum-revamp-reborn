@@ -1,0 +1,10 @@
+# Obseum
+
+> Obseum implementuje AI a procesní automatizaci pro malé a střední firmy v Česku — AI agenti, automatizace dokumentů, lead generation a penetration testing.
+
+Obseum pomáhá majitelům firem ušetřit hodiny denně automatizací rutiny: zpracování e-mailů a faktur, virtuální asistenti pro zákazníky, vyhledávání ve smlouvách a propojení interních systémů. Konzultace, návrh i provoz pod jednou střechou.
+
+## Pages
+
+- [Domů](/): Přehled služeb, konkrétní příběhy zákazníků, ukázky automatizace a kontakt.
+- [Kariéra](/career): Otevřené pozice v Obseum (Penetration Tester, Solution Architect).

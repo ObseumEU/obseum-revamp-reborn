@@ -12,3 +12,5 @@ Allow: /
 
 User-agent: *
 Allow: /
+
+Sitemap: https://obseum-revamp-reborn.lovable.app/sitemap.xml
