@@ -53,6 +53,6 @@ const Tools = () => {
       </div>
     </section>
   );
-});
+};
 
 export default Tools;
