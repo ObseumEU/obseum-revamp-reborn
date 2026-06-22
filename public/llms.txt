@@ -8,3 +8,7 @@ Obseum pomáhá majitelům firem ušetřit hodiny denně automatizací rutiny: z
 
 - [Domů](/): Přehled služeb, konkrétní příběhy zákazníků, ukázky automatizace a kontakt.
 - [Kariéra](/career): Otevřené pozice v Obseum (Penetration Tester, Solution Architect).
+
+## Guides
+
+- [AI automatizace pro malé firmy](/blog/ai-automation-small-business): Praktický průvodce, jak SMB firma bez IT týmu zavede AI — nástroje, ceny, první kroky.
