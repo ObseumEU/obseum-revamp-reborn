@@ -66,9 +66,9 @@ const Hero = () => {
 
         <div className="reveal reveal-delay-4 grid grid-cols-1 md:grid-cols-3 gap-3 max-w-4xl mx-auto">
           {[
-            { Icon: Sparkles, t: "AI Agent", s: "answer · qualify · act", c: "primary" },
-            { Icon: Workflow, t: "Workflow", s: "n8n · Make · custom", c: "accent" },
-            { Icon: Cpu, t: "LLM Stack", s: "GPT · Claude · Llama", c: "primary" },
+            { Icon: Clock, t: "Ušetříte čas", s: "průměrně 12 hodin týdně", c: "primary" },
+            { Icon: Smile, t: "Spokojení zákazníci", s: "odpověď do pár vteřin", c: "accent" },
+            { Icon: TrendingUp, t: "Více obchodů", s: "žádná poptávka nezapadne", c: "primary" },
           ].map(({ Icon, t: title, s, c }) => (
             <div
               key={title}
