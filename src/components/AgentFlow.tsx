@@ -1,16 +1,16 @@
-import { Brain, Database, MessageSquare, Mail, Calendar, FileSpreadsheet, Webhook, Sparkles } from "lucide-react";
+import { Heart, MessageSquare, Mail, Phone, Calendar, FileText, Users, Bell } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
 
 const inputs = [
-  { Icon: MessageSquare, label: "Chat / Web" },
-  { Icon: Mail, label: "E-mail" },
-  { Icon: Webhook, label: "API / Webhook" },
+  { Icon: MessageSquare, label: "Zpráva z webu", sub: "\"Máte volný termín?\"" },
+  { Icon: Mail, label: "E-mail od klienta", sub: "\"Pošlete nabídku.\"" },
+  { Icon: Phone, label: "Volání mimo dobu", sub: "\"Rád bych se objednal.\"" },
 ];
 const tools = [
-  { Icon: Database, label: "CRM" },
-  { Icon: FileSpreadsheet, label: "Sheets / ERP" },
-  { Icon: Calendar, label: "Kalendář" },
-  { Icon: Mail, label: "Outreach" },
+  { Icon: Calendar, label: "Navrhne termín", sub: "podle vašeho kalendáře" },
+  { Icon: FileText, label: "Pošle nabídku", sub: "ze šablony, s vaší cenou" },
+  { Icon: Users, label: "Předá kolegovi", sub: "do CRM, s celou historií" },
+  { Icon: Bell, label: "Upozorní vás", sub: "jen když je to důležité" },
 ];
 
 const AgentFlow = () => {
@@ -42,17 +42,19 @@ const AgentFlow = () => {
               <div className="text-[10px] uppercase tracking-[0.25em] text-muted-foreground font-bold mb-2">
                 01 · {t("agent.col1")}
               </div>
-              {inputs.map(({ Icon, label }, i) => (
+              {inputs.map(({ Icon, label, sub }, i) => (
                 <div
                   key={label}
                   className="group flex items-center gap-3 glass rounded-xl p-3.5 hover:border-primary/40 transition-all"
                   style={{ animation: `reveal-up 0.6s ${i * 0.1}s both` }}
                 >
-                  <div className="w-10 h-10 rounded-lg bg-primary/10 border border-primary/20 flex items-center justify-center">
+                  <div className="w-10 h-10 rounded-lg bg-primary/10 border border-primary/20 flex items-center justify-center shrink-0">
                     <Icon className="h-[18px] w-[18px] text-primary" />
                   </div>
-                  <div className="text-sm font-semibold">{label}</div>
-                  <div className="ml-auto w-1.5 h-1.5 rounded-full bg-primary animate-pulse" />
+                  <div className="min-w-0">
+                    <div className="text-sm font-semibold truncate">{label}</div>
+                    <div className="text-[11px] text-muted-foreground truncate">{sub}</div>
+                  </div>
                 </div>
               ))}
             </div>
@@ -103,22 +105,12 @@ const AgentFlow = () => {
 
               <div className="relative w-48 h-48 rounded-full bg-gradient-primary p-[2px] shadow-glow">
                 <div className="w-full h-full rounded-full bg-card flex flex-col items-center justify-center text-center px-4">
-                  <Brain className="h-10 w-10 text-primary mb-2 animate-float-slow" />
-                  <div className="text-sm font-bold tracking-tight">AI Agent</div>
-                  <div className="text-[10px] uppercase tracking-[0.2em] text-muted-foreground mt-1">
-                    GPT · Claude · Llama
+                  <Heart className="h-10 w-10 text-primary mb-2 animate-float-slow" />
+                  <div className="text-sm font-bold tracking-tight">Váš AI pomocník</div>
+                  <div className="text-[11px] text-muted-foreground mt-1">
+                    učí se z vašich pravidel
                   </div>
                 </div>
-              </div>
-
-              <div className="absolute -top-2 left-2 glass rounded-full px-3 py-1 text-[10px] font-mono text-primary flex items-center gap-1.5 animate-float-slow">
-                <Sparkles className="h-3 w-3" /> reasoning…
-              </div>
-              <div
-                className="absolute -bottom-2 right-2 glass rounded-full px-3 py-1 text-[10px] font-mono flex items-center gap-1.5 animate-float-slow"
-                style={{ animationDelay: "1.5s", color: "hsl(var(--accent))" }}
-              >
-                tool_call()
               </div>
             </div>
 
@@ -126,20 +118,19 @@ const AgentFlow = () => {
               <div className="text-[10px] uppercase tracking-[0.25em] text-muted-foreground font-bold mb-2 md:text-right">
                 02 · {t("agent.col2")}
               </div>
-              {tools.map(({ Icon, label }, i) => (
+              {tools.map(({ Icon, label, sub }, i) => (
                 <div
                   key={label}
                   className="group flex items-center gap-3 glass rounded-xl p-3.5 hover:border-accent/40 transition-all md:flex-row-reverse md:text-right"
                   style={{ animation: `reveal-up 0.6s ${0.4 + i * 0.1}s both` }}
                 >
-                  <div className="w-10 h-10 rounded-lg bg-accent/10 border border-accent/20 flex items-center justify-center">
+                  <div className="w-10 h-10 rounded-lg bg-accent/10 border border-accent/20 flex items-center justify-center shrink-0">
                     <Icon className="h-[18px] w-[18px]" style={{ color: "hsl(var(--accent))" }} />
                   </div>
-                  <div className="text-sm font-semibold">{label}</div>
-                  <div
-                    className="md:ml-0 ml-auto w-1.5 h-1.5 rounded-full animate-pulse"
-                    style={{ background: "hsl(var(--accent))" }}
-                  />
+                  <div className="min-w-0">
+                    <div className="text-sm font-semibold truncate">{label}</div>
+                    <div className="text-[11px] text-muted-foreground truncate">{sub}</div>
+                  </div>
                 </div>
               ))}
             </div>
@@ -147,9 +138,9 @@ const AgentFlow = () => {
 
           <div className="relative mt-10 pt-6 border-t border-border/40 grid grid-cols-2 md:grid-cols-4 gap-6 text-center md:text-left">
             {[
-              { k: "agent.kpi1", v: "< 2s" },
+              { k: "agent.kpi1", v: "do 2 vteřin" },
               { k: "agent.kpi2", v: "24/7" },
-              { k: "agent.kpi3", v: "99.9%" },
+              { k: "agent.kpi3", v: "99,9 %" },
               { k: "agent.kpi4", v: "GDPR" },
             ].map(({ k, v }) => (
               <div key={k}>

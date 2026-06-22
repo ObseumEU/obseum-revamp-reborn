@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { useLanguage } from "@/contexts/LanguageContext";
-import { ArrowRight, Sparkles, Cpu, Workflow } from "lucide-react";
+import { ArrowRight, Clock, Smile, TrendingUp } from "lucide-react";
 
 const Hero = () => {
   const { t } = useLanguage();
@@ -66,9 +66,9 @@ const Hero = () => {
 
         <div className="reveal reveal-delay-4 grid grid-cols-1 md:grid-cols-3 gap-3 max-w-4xl mx-auto">
           {[
-            { Icon: Sparkles, t: "AI Agent", s: "answer · qualify · act", c: "primary" },
-            { Icon: Workflow, t: "Workflow", s: "n8n · Make · custom", c: "accent" },
-            { Icon: Cpu, t: "LLM Stack", s: "GPT · Claude · Llama", c: "primary" },
+            { Icon: Clock, t: "Ušetříte čas", s: "průměrně 12 hodin týdně", c: "primary" },
+            { Icon: Smile, t: "Spokojení zákazníci", s: "odpověď do pár vteřin", c: "accent" },
+            { Icon: TrendingUp, t: "Více obchodů", s: "žádná poptávka nezapadne", c: "primary" },
           ].map(({ Icon, t: title, s, c }) => (
             <div
               key={title}
@@ -86,7 +86,7 @@ const Hero = () => {
               </div>
               <div className="text-left">
                 <div className="text-sm font-bold">{title}</div>
-                <div className="text-[10px] font-mono text-muted-foreground tracking-wider">{s}</div>
+                <div className="text-[11px] text-muted-foreground">{s}</div>
               </div>
               <div
                 className="ml-auto w-1.5 h-1.5 rounded-full animate-pulse"
