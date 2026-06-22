@@ -6,6 +6,7 @@ import AgentFlow from "@/components/AgentFlow";
 import Services from "@/components/Services";
 import AutomationFlow from "@/components/AutomationFlow";
 import Stories from "@/components/Stories";
+import PodcastPlayer from "@/components/PodcastPlayer";
 import UseCases from "@/components/UseCases";
 import Process from "@/components/Process";
 import Tools from "@/components/Tools";
