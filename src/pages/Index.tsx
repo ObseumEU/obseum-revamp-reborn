@@ -67,6 +67,7 @@ const Index = () => {
         <Services />
         <AutomationFlow />
         <Stories />
+        <PodcastPlayer />
         <UseCases />
         <Metrics />
         <Process />
