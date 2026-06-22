@@ -1,84 +1,99 @@
 import { Button } from "@/components/ui/button";
 import { useLanguage } from "@/contexts/LanguageContext";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Sparkles, Cpu, Workflow } from "lucide-react";
 
 const Hero = () => {
   const { t } = useLanguage();
-
-  const scrollTo = (id: string) => {
+  const scrollTo = (id: string) =>
     document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
-  };
 
   return (
     <section
       id="home"
-      className="relative min-h-screen flex items-center justify-center overflow-hidden pt-32 pb-24"
+      className="relative min-h-screen flex items-center justify-center overflow-hidden pt-32 pb-20"
     >
-      {/* Ambient backdrop */}
       <div className="absolute inset-0 bg-gradient-hero pointer-events-none" />
-      <div className="absolute inset-0 bg-grid opacity-40 [mask-image:radial-gradient(ellipse_60%_50%_at_50%_30%,black,transparent)]" />
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[1100px] h-[600px] bg-primary/10 blur-[140px] rounded-full pointer-events-none" />
+      <div className="absolute inset-0 bg-grid-sm opacity-40 mask-radial" />
 
-      <div className="relative z-10 text-center max-w-5xl mx-auto px-6">
-        <div className="animate-fade-in">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-primary/30 bg-primary/10 text-primary text-[11px] font-bold tracking-widest uppercase mb-10">
-            <span className="w-1.5 h-1.5 rounded-full bg-primary animate-pulse" />
-            {t("hero.badge")}
-          </div>
+      <div className="absolute top-1/4 left-1/4 w-72 h-72 bg-primary/20 rounded-full blur-3xl animate-float-slow" />
+      <div
+        className="absolute bottom-1/4 right-1/4 w-72 h-72 bg-accent/20 rounded-full blur-3xl animate-float-slow"
+        style={{ animationDelay: "3s" }}
+      />
 
-          <h1 className="text-6xl md:text-7xl lg:text-8xl font-bold mb-8 leading-[0.95] tracking-tightest text-balance">
-            <span className="text-foreground">{t("hero.title")}</span>{" "}
-            <span className="bg-clip-text text-transparent bg-gradient-to-b from-foreground to-muted-foreground">
-              {t("hero.highlight")}
+      <div className="relative z-10 text-center max-w-6xl mx-auto px-6">
+        <div className="reveal">
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full glass text-[11px] font-bold tracking-widest uppercase mb-10">
+            <span className="relative flex h-2 w-2">
+              <span className="absolute inline-flex h-full w-full rounded-full bg-primary opacity-75 animate-ping" />
+              <span className="relative inline-flex rounded-full h-2 w-2 bg-primary" />
             </span>
-          </h1>
-
-          <p className="text-lg md:text-xl text-muted-foreground mb-4 max-w-2xl mx-auto leading-relaxed">
-            {t("hero.subtitle")}
-          </p>
-          <p className="text-base text-muted-foreground/70 mb-12 max-w-2xl mx-auto leading-relaxed">
-            {t("hero.description")}
-          </p>
-
-          <div className="flex flex-col sm:flex-row gap-3 justify-center mb-24">
-            <Button
-              size="lg"
-              onClick={() => scrollTo("contact")}
-              className="text-sm px-8 py-6 rounded-xl shadow-elegant hover:shadow-glow transition-all duration-300 font-bold"
-            >
-              {t("hero.ctaPrimary")}
-              <ArrowRight className="ml-2 h-4 w-4" />
-            </Button>
-            <Button
-              size="lg"
-              variant="outline"
-              onClick={() => scrollTo("process")}
-              className="text-sm px-8 py-6 rounded-xl font-bold bg-secondary/40 border-border hover:bg-secondary"
-            >
-              {t("hero.ctaSecondary")}
-            </Button>
+            <span className="text-foreground/90">{t("hero.badge")}</span>
           </div>
+        </div>
 
-          <div className="grid grid-cols-3 gap-6 md:gap-12 max-w-3xl mx-auto pt-12 border-t border-border/60">
-            <div className="text-left md:text-center">
-              <div className="text-3xl md:text-5xl font-bold tracking-tight mb-2">50+</div>
-              <div className="text-[10px] md:text-xs uppercase tracking-[0.2em] text-muted-foreground font-bold">
-                {t("hero.stat1")}
+        <h1 className="text-6xl md:text-7xl lg:text-8xl font-bold mb-6 leading-[0.95] tracking-tightest text-balance reveal reveal-delay-1">
+          <span className="text-gradient-light">{t("hero.title")}</span>
+          <br />
+          <span className="text-gradient">{t("hero.highlight")}</span>
+        </h1>
+
+        <p className="text-lg md:text-xl text-foreground/70 mb-3 max-w-2xl mx-auto leading-relaxed reveal reveal-delay-2">
+          {t("hero.subtitle")}
+        </p>
+        <p className="text-base text-muted-foreground/70 mb-12 max-w-2xl mx-auto leading-relaxed reveal reveal-delay-2">
+          {t("hero.description")}
+        </p>
+
+        <div className="flex flex-col sm:flex-row gap-3 justify-center mb-20 reveal reveal-delay-3">
+          <Button
+            size="lg"
+            onClick={() => scrollTo("contact")}
+            className="text-sm px-8 py-6 rounded-2xl shadow-elegant hover:shadow-glow transition-all duration-300 font-bold bg-gradient-primary text-primary-foreground hover:scale-[1.03]"
+          >
+            {t("hero.ctaPrimary")}
+            <ArrowRight className="ml-2 h-4 w-4" />
+          </Button>
+          <Button
+            size="lg"
+            variant="outline"
+            onClick={() => scrollTo("agent")}
+            className="text-sm px-8 py-6 rounded-2xl font-bold glass hover:border-primary/40"
+          >
+            {t("hero.ctaSecondary")}
+          </Button>
+        </div>
+
+        <div className="reveal reveal-delay-4 grid grid-cols-1 md:grid-cols-3 gap-3 max-w-4xl mx-auto">
+          {[
+            { Icon: Sparkles, t: "AI Agent", s: "answer · qualify · act", c: "primary" },
+            { Icon: Workflow, t: "Workflow", s: "n8n · Make · custom", c: "accent" },
+            { Icon: Cpu, t: "LLM Stack", s: "GPT · Claude · Llama", c: "primary" },
+          ].map(({ Icon, t: title, s, c }) => (
+            <div
+              key={title}
+              className="glass rounded-2xl p-4 flex items-center gap-3 hover:border-primary/40 transition-all"
+            >
+              <div
+                className={`w-10 h-10 rounded-xl flex items-center justify-center ${
+                  c === "accent" ? "bg-accent/10 border border-accent/20" : "bg-primary/10 border border-primary/20"
+                }`}
+              >
+                <Icon
+                  className="h-4 w-4"
+                  style={{ color: c === "accent" ? "hsl(var(--accent))" : "hsl(var(--primary))" }}
+                />
               </div>
-            </div>
-            <div className="text-left md:text-center">
-              <div className="text-3xl md:text-5xl font-bold tracking-tight mb-2">70%</div>
-              <div className="text-[10px] md:text-xs uppercase tracking-[0.2em] text-muted-foreground font-bold">
-                {t("hero.stat2")}
+              <div className="text-left">
+                <div className="text-sm font-bold">{title}</div>
+                <div className="text-[10px] font-mono text-muted-foreground tracking-wider">{s}</div>
               </div>
+              <div
+                className="ml-auto w-1.5 h-1.5 rounded-full animate-pulse"
+                style={{ background: c === "accent" ? "hsl(var(--accent))" : "hsl(var(--primary))" }}
+              />
             </div>
-            <div className="text-left md:text-center">
-              <div className="text-3xl md:text-5xl font-bold tracking-tight mb-2">40+</div>
-              <div className="text-[10px] md:text-xs uppercase tracking-[0.2em] text-muted-foreground font-bold">
-                {t("hero.stat3")}
-              </div>
-            </div>
-          </div>
+          ))}
         </div>
       </div>
     </section>
