@@ -134,7 +134,12 @@ export default {
 				'accordion-up': 'accordion-up 0.2s ease-out',
 				'fade-in': 'fade-in 0.6s ease-out',
 				'float': 'float 6s ease-in-out infinite',
-				'scroll': 'scroll 60s linear infinite'
+				'float-slow': 'float-slow 9s ease-in-out infinite',
+				'scroll': 'scroll 60s linear infinite',
+				'pulse-ring': 'pulse-ring 2.4s cubic-bezier(0.215, 0.61, 0.355, 1) infinite',
+				'dash-flow': 'dash-flow 3s linear infinite',
+				'shimmer': 'shimmer 3s linear infinite',
+				'spin-slow': 'spin-slow 24s linear infinite'
 			}
 		}
 	},
