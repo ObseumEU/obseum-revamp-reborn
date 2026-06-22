@@ -6,14 +6,14 @@ import podcastEN from '@/assets/podcast-obseum-en.mp3.asset.json';
 import { useLanguage } from '@/contexts/LanguageContext';
 
 const PodcastPlayer: React.FC = () => {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
   const audioRef = useRef<HTMLAudioElement | null>(null);
   const [isPlaying, setIsPlaying] = useState(false);
   const [progress, setProgress] = useState(0);
   const [duration, setDuration] = useState(0);
   const [currentTime, setCurrentTime] = useState(0);
 
-  const audioUrl = t('language') === 'en' ? podcastEN.url : podcastCZ.url;
+  const audioUrl = language === 'en' ? podcastEN.url : podcastCZ.url;
 
   // Re-initialize audio when language changes
   useEffect(() => {
