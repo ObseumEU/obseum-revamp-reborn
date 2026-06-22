@@ -1,18 +1,20 @@
 import { useLanguage } from "@/contexts/LanguageContext";
-import { Coffee, Frown, Smile, Clock, Mail, FileText, Phone, CheckCircle2, AlertTriangle } from "lucide-react";
+import { Coffee, Frown, Smile, Clock, Mail, FileText, Search, CheckCircle2, AlertTriangle, Receipt, Users } from "lucide-react";
 
 const before = [
-  { time: "08:00", Icon: Mail, text: "47 nových e-mailů ve schránce. Kde začít?" },
-  { time: "10:30", Icon: FileText, text: "Hledání informace ke smlouvě v deseti složkách." },
-  { time: "13:00", Icon: Phone, text: "Zákazník volá podruhé — odpověď se ztratila." },
+  { time: "08:00", Icon: Mail, text: "47 e-mailů ve schránce — 30 z nich jsou typové dotazy zákazníků." },
+  { time: "09:30", Icon: Receipt, text: "Účetní přepisuje 40 faktur z PDF do systému. Ručně." },
+  { time: "10:30", Icon: Search, text: "Hledání odstavce ve staré smlouvě — 40 minut, klient čeká." },
+  { time: "13:00", Icon: Users, text: "Mistr posílá e-mailem data ze 3 strojů do kanceláře." },
   { time: "16:00", Icon: AlertTriangle, text: "Poptávka z webu zapadla. Konkurence ji vzala." },
   { time: "19:00", Icon: Clock, text: "Práce přetekla do večera. Zase." },
 ];
 
 const after = [
-  { time: "08:00", Icon: Coffee, text: "Ranní káva a krátký přehled: 3 věci, které opravdu potřebují vás." },
-  { time: "10:30", Icon: CheckCircle2, text: "Smlouva najetá za 4 vteřiny — stačil jeden dotaz." },
-  { time: "13:00", Icon: Smile, text: "Zákazník už má odpověď. Volá poděkovat." },
+  { time: "08:00", Icon: Coffee, text: "Káva a krátký přehled: 3 věci, které opravdu potřebují vás." },
+  { time: "09:30", Icon: Receipt, text: "Faktury jsou už zaúčtované. Účetní jen schválila 2 výjimky." },
+  { time: "10:30", Icon: CheckCircle2, text: "Odstavec ze smlouvy najetý za 4 vteřiny — i s odkazem na zdroj." },
+  { time: "13:00", Icon: Users, text: "Data ze strojů přicházejí samy. Mistr řeší jen výpadek lisu." },
   { time: "16:00", Icon: Mail, text: "Nová poptávka? Už je v CRM a obchodník má brief." },
   { time: "19:00", Icon: Clock, text: "Domů včas. K dětem, na trénink, na vás." },
 ];
