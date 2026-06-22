@@ -55,8 +55,36 @@ const Career = () => {
     }
   ];
 
+  const jobPostings = jobs.map((job) => ({
+    "@context": "https://schema.org",
+    "@type": "JobPosting",
+    title: job.title,
+    description: job.description,
+    employmentType: "FULL_TIME",
+    hiringOrganization: {
+      "@type": "Organization",
+      name: "Obseum",
+      sameAs: "https://obseum-revamp-reborn.lovable.app/",
+    },
+    jobLocation: {
+      "@type": "Place",
+      address: {
+        "@type": "PostalAddress",
+        addressLocality: "Prague",
+        addressCountry: "CZ",
+      },
+    },
+    datePosted: "2026-01-01",
+  }));
+
   return (
     <div className="min-h-screen bg-background text-foreground">
+      <Seo
+        title="Kariéra — Obseum | Otevřené pozice v AI a kyberbezpečnosti"
+        description="Hledáme Penetration Testera a Solution Architekta. Pojďte stavět budoucnost AI a bezpečnosti v Obseum."
+        path="/career"
+        jsonLd={jobPostings}
+      />
       <Header />
       
       {/* Hero Section */}
