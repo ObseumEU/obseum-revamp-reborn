@@ -1,101 +1,83 @@
 import { Button } from "@/components/ui/button";
-import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
 import { useLanguage } from "@/contexts/LanguageContext";
+import { Sparkles, ArrowRight } from "lucide-react";
 import heroBackground from "@/assets/hero-bg.jpg";
 
 const Hero = () => {
   const { t } = useLanguage();
+
+  const scrollTo = (id: string) => {
+    document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
+  };
+
   return (
-    <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Background */}
+    <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden pt-24">
       <div className="absolute inset-0">
-        <img 
-          src={heroBackground} 
-          alt="Hero background" 
-          className="w-full h-full object-cover opacity-30"
-        />
+        <img src={heroBackground} alt="" className="w-full h-full object-cover opacity-20" />
         <div className="absolute inset-0 bg-gradient-hero"></div>
         <div className="absolute inset-0 bg-gradient-mesh"></div>
-        <div className="absolute inset-0 bg-background/60"></div>
+        <div className="absolute inset-0 bg-background/70"></div>
       </div>
-      
-      {/* Content */}
+
       <div className="relative z-10 text-center max-w-5xl mx-auto px-6">
         <div className="animate-fade-in">
-          <div className="inline-flex items-center px-4 py-2 rounded-full bg-primary/10 border border-primary/20 mb-8 backdrop-blur-sm">
-            <span className="text-primary font-medium">Enterprise Technology Partner</span>
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 mb-8 backdrop-blur-sm">
+            <Sparkles className="h-4 w-4 text-primary" />
+            <span className="text-primary font-medium text-sm">{t('hero.badge')}</span>
           </div>
-          
-          <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold mb-6 leading-tight">
+
+          <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold mb-6 leading-[1.05] tracking-tight">
             {t('hero.title')}{" "}
             <span className="bg-gradient-primary bg-clip-text text-transparent">
               {t('hero.highlight')}
             </span>
           </h1>
-          
-          <h2 className="text-2xl md:text-3xl lg:text-4xl font-semibold mb-6 text-muted-foreground">
+
+          <p className="text-xl md:text-2xl text-muted-foreground mb-4 max-w-3xl mx-auto font-medium">
             {t('hero.subtitle')}
-          </h2>
-          
-          <p className="text-xl md:text-2xl text-muted-foreground mb-10 max-w-3xl mx-auto leading-relaxed">
+          </p>
+          <p className="text-base md:text-lg text-muted-foreground/80 mb-10 max-w-2xl mx-auto leading-relaxed">
             {t('hero.description')}
           </p>
-          
-          <div className="flex flex-col sm:flex-row gap-6 justify-center mb-12">
-            <Dialog>
-              <DialogTrigger asChild>
-                <Button size="lg" className="text-lg px-10 py-7 shadow-elegant hover:shadow-glow transition-all duration-300 hover:scale-105">
-                  {t('hero.cta')}
-                </Button>
-              </DialogTrigger>
-              <DialogContent className="sm:max-w-md">
-                <DialogHeader>
-                  <DialogTitle className="text-2xl font-bold text-center mb-4">Contact Information</DialogTitle>
-                </DialogHeader>
-                <div className="space-y-4">
-                  <div className="flex items-center gap-3">
-                    <span className="text-primary font-semibold min-w-16">Phone:</span>
-                    <a href="tel:+420724676829" className="hover:text-primary transition-colors">+420 724 676 829</a>
-                  </div>
-                  <div className="flex items-center gap-3">
-                    <span className="text-primary font-semibold min-w-16">Email:</span>
-                    <a href="mailto:info@obseum.cz" className="hover:text-primary transition-colors">info@obseum.cz</a>
-                  </div>
-                  <div className="pt-4 border-t border-border/30">
-                    <div className="text-sm text-muted-foreground space-y-1">
-                      <p><strong>Obseum s.r.o.</strong></p>
-                      <p>IČO: 07098308</p>
-                      <p>DIČ: CZ07098308</p>
-                      <p>Datová schránka: 7xm8rjr</p>
-                      <p>Rybná 716/24, Staré Město, 110 00 Praha</p>
-                    </div>
-                  </div>
-                </div>
-              </DialogContent>
-            </Dialog>
+
+          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
+            <Button
+              size="lg"
+              onClick={() => scrollTo('contact')}
+              className="text-base px-8 py-6 shadow-elegant hover:shadow-glow transition-all duration-300"
+            >
+              {t('hero.ctaPrimary')}
+              <ArrowRight className="ml-2 h-4 w-4" />
+            </Button>
+            <Button
+              size="lg"
+              variant="outline"
+              onClick={() => scrollTo('process')}
+              className="text-base px-8 py-6"
+            >
+              {t('hero.ctaSecondary')}
+            </Button>
           </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-16 text-center">
-            <div className="p-6">
-              <div className="text-3xl font-bold text-primary mb-2">50+</div>
-              <div className="text-muted-foreground">Enterprise Projects</div>
+
+          <div className="grid grid-cols-3 gap-4 md:gap-8 max-w-2xl mx-auto">
+            <div>
+              <div className="text-2xl md:text-4xl font-bold text-primary mb-1">50+</div>
+              <div className="text-xs md:text-sm text-muted-foreground">{t('hero.stat1')}</div>
             </div>
-            <div className="p-6">
-              <div className="text-3xl font-bold text-primary mb-2">99.9%</div>
-              <div className="text-muted-foreground">System Uptime</div>
+            <div>
+              <div className="text-2xl md:text-4xl font-bold text-primary mb-1">70%</div>
+              <div className="text-xs md:text-sm text-muted-foreground">{t('hero.stat2')}</div>
             </div>
-            <div className="p-6">
-              <div className="text-3xl font-bold text-primary mb-2">24/7</div>
-              <div className="text-muted-foreground">Technical Support</div>
+            <div>
+              <div className="text-2xl md:text-4xl font-bold text-primary mb-1">40+</div>
+              <div className="text-xs md:text-sm text-muted-foreground">{t('hero.stat3')}</div>
             </div>
           </div>
         </div>
       </div>
-      
-      {/* Floating elements */}
+
       <div className="absolute top-1/4 left-1/4 w-4 h-4 bg-primary rounded-full animate-float opacity-60"></div>
-      <div className="absolute top-3/4 right-1/4 w-6 h-6 bg-accent rounded-full animate-float opacity-40" style={{animationDelay: '2s'}}></div>
-      <div className="absolute top-1/2 right-1/3 w-3 h-3 bg-primary rounded-full animate-float opacity-50" style={{animationDelay: '4s'}}></div>
+      <div className="absolute top-3/4 right-1/4 w-6 h-6 bg-accent rounded-full animate-float opacity-40" style={{ animationDelay: '2s' }}></div>
     </section>
   );
 };
