@@ -1,14 +1,34 @@
 import React, { useRef, useState, useEffect } from 'react';
 import { Play, Pause, Headphones, Clock } from 'lucide-react';
 
-import podcastAsset from '@/assets/podcast-obseum.mp3.asset.json';
+import podcastCZ from '@/assets/podcast-obseum.mp3.asset.json';
+import podcastEN from '@/assets/podcast-obseum-en.mp3.asset.json';
+import { useLanguage } from '@/contexts/LanguageContext';
 
 const PodcastPlayer: React.FC = () => {
+  const { t, language } = useLanguage();
   const audioRef = useRef<HTMLAudioElement | null>(null);
   const [isPlaying, setIsPlaying] = useState(false);
   const [progress, setProgress] = useState(0);
   const [duration, setDuration] = useState(0);
   const [currentTime, setCurrentTime] = useState(0);
+
+  const audioUrl = language === 'en' ? podcastEN.url : podcastCZ.url;
+
+  // Re-initialize audio when language changes
+  useEffect(() => {
+    const audio = audioRef.current;
+    if (!audio) return;
+
+    // Pause and reset when source changes
+    audio.pause();
+    setIsPlaying(false);
+    setProgress(0);
+    setCurrentTime(0);
+    setDuration(0);
+    audio.src = audioUrl;
+    audio.load();
+  }, [audioUrl]);
 
   useEffect(() => {
     const audio = audioRef.current;
@@ -37,7 +57,7 @@ const PodcastPlayer: React.FC = () => {
       audio.removeEventListener('loadedmetadata', updateProgress);
       audio.removeEventListener('ended', handleEnded);
     };
-  }, []);
+  }, [audioUrl]);
 
   const togglePlay = () => {
     const audio = audioRef.current;
@@ -70,13 +90,13 @@ const PodcastPlayer: React.FC = () => {
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
         <div className="max-w-3xl mx-auto text-center mb-12">
           <span className="inline-block px-3 py-1 mb-4 text-xs font-medium tracking-wider uppercase rounded-full bg-primary/10 text-primary">
-            Podcast
+            {t('podcast.eyebrow')}
           </span>
           <h2 className="text-3xl md:text-4xl font-bold tracking-tight mb-4">
-            Nechce se vám číst? Poslechněte si nás.
+            {t('podcast.title')}
           </h2>
           <p className="text-lg text-muted-foreground">
-            6 minut, které vám ušetří měsíce zkoumání, jak AI funguje ve firmách jako ta vaše.
+            {t('podcast.subtitle')}
           </p>
         </div>
 
@@ -89,15 +109,15 @@ const PodcastPlayer: React.FC = () => {
               </div>
               <div className="flex-1 min-w-0">
                 <h3 className="text-lg font-semibold leading-snug mb-1">
-                  AI agenti ukončí éru digitálních kurýrů
+                  {t('podcast.episodeTitle')}
                 </h3>
                 <p className="text-sm text-muted-foreground mb-2">
-                  Jak přestat kopírovat data z okna do okna a nechat stroj dělat rutinu za vás.
+                  {t('podcast.episodeDesc')}
                 </p>
                 <div className="flex items-center gap-3 text-xs text-muted-foreground">
                   <span className="inline-flex items-center gap-1">
                     <Clock className="w-3.5 h-3.5" />
-                    5:57
+                    {t('podcast.duration')}
                   </span>
                   <span>Obseum</span>
                 </div>
@@ -109,7 +129,7 @@ const PodcastPlayer: React.FC = () => {
               <button
                 onClick={togglePlay}
                 className="shrink-0 w-12 h-12 rounded-full bg-primary text-primary-foreground flex items-center justify-center hover:scale-105 transition-transform duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2"
-                aria-label={isPlaying ? 'Pozastavit' : 'Přehrát'}
+                aria-label={isPlaying ? t('podcast.pause') : t('podcast.play')}
               >
                 {isPlaying ? (
                   <Pause className="w-5 h-5" />
@@ -129,7 +149,7 @@ const PodcastPlayer: React.FC = () => {
                   style={{
                     background: `linear-gradient(to right, hsl(var(--primary)) ${progress}%, hsl(var(--border)) ${progress}%)`,
                   }}
-                  aria-label="Pozice v audiu"
+                  aria-label={t('podcast.seekLabel')}
                 />
                 <div className="flex justify-between mt-1.5 text-xs text-muted-foreground">
                   <span>{formatTime(currentTime)}</span>
@@ -138,7 +158,7 @@ const PodcastPlayer: React.FC = () => {
               </div>
             </div>
 
-            <audio ref={audioRef} src={podcastAsset.url} preload="metadata" />
+            <audio ref={audioRef} src={audioUrl} preload="metadata" />
           </div>
         </div>
       </div>

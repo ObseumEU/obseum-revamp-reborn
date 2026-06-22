@@ -167,6 +167,17 @@ const translations = {
       company: "Společnost",
       copyright: "Všechna práva vyhrazena.",
     },
+    podcast: {
+      eyebrow: "Podcast",
+      title: "Nechce se vám číst? Poslechněte si nás.",
+      subtitle: "6 minut, které vám ušetří měsíce zkoumání, jak AI funguje ve firmách jako ta vaše.",
+      episodeTitle: "AI agenti ukončí éru digitálních kurýrů",
+      episodeDesc: "Jak přestat kopírovat data z okna do okna a nechat stroj dělat rutinu za vás.",
+      duration: "5:57",
+      play: "Přehrát",
+      pause: "Pozastavit",
+      seekLabel: "Pozice v audiu",
+    },
   },
   en: {
     nav: {
@@ -307,6 +318,17 @@ const translations = {
       services: "Services",
       company: "Company",
       copyright: "All rights reserved.",
+    },
+    podcast: {
+      eyebrow: "Podcast",
+      title: "Rather listen than read? Hit play.",
+      subtitle: "6 minutes that save you months of figuring out how AI works in a business like yours.",
+      episodeTitle: "AI Agents End the Era of Digital Couriers",
+      episodeDesc: "How to stop copying data window-to-window and let the machine do the routine for you.",
+      duration: "5:40",
+      play: "Play",
+      pause: "Pause",
+      seekLabel: "Audio position",
     },
   },
 };
