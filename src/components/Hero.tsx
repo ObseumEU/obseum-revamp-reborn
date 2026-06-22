@@ -86,7 +86,7 @@ const Hero = () => {
               </div>
               <div className="text-left">
                 <div className="text-sm font-bold">{title}</div>
-                <div className="text-[10px] font-mono text-muted-foreground tracking-wider">{s}</div>
+                <div className="text-[11px] text-muted-foreground">{s}</div>
               </div>
               <div
                 className="ml-auto w-1.5 h-1.5 rounded-full animate-pulse"
