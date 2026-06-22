@@ -1,11 +1,37 @@
 import { useLanguage } from "@/contexts/LanguageContext";
+import { Shield, Zap, Puzzle, HeartHandshake, Sparkles, Clock } from "lucide-react";
 
-const groups = [
-  { label: "LLM & AI", items: ["OpenAI", "Anthropic", "Llama", "Gemini", "Mistral", "LangChain", "LlamaIndex"] },
-  { label: "Automation", items: ["n8n", "Make", "Zapier", "Pipedream", "Activepieces", "Power Automate"] },
-  { label: "Data & Cloud", items: ["Supabase", "PostgreSQL", "Pinecone", "Qdrant", "AWS Bedrock", "Azure AI", "Vertex AI"] },
-  { label: "Business", items: ["Pipedrive", "HubSpot", "Slack", "Notion", "Google Workspace", "Microsoft 365"] },
-  { label: "Code", items: ["TypeScript", "Python", "Next.js", "React", "Docker", "Vercel"] },
+const reasons = [
+  {
+    Icon: Sparkles,
+    title: "Pracujeme s tím nejlepším na trhu",
+    desc: "Stejné AI technologie, na kterých staví největší firmy světa — jen v podobě, která dává smysl pro vás.",
+  },
+  {
+    Icon: Puzzle,
+    title: "Napojíme se na to, co už máte",
+    desc: "Nepotřebujete měnit účetní systém, e-shop ani CRM. Stavíme nad tím, s čím už pracujete.",
+  },
+  {
+    Icon: Shield,
+    title: "Vaše data zůstávají vaše",
+    desc: "GDPR, jasná smlouva a přístupy. Žádné posílání dat zákazníků kam-koliv-do-světa.",
+  },
+  {
+    Icon: Zap,
+    title: "Rychle a po krocích",
+    desc: "Žádné půlroční projekty. První výsledek vidíte do pár týdnů a postupně přidáváme dál.",
+  },
+  {
+    Icon: HeartHandshake,
+    title: "Mluvíme lidsky, ne odbornicky",
+    desc: "Žádné technické zkratky. Vysvětlíme všechno na vašich konkrétních příkladech a problémech.",
+  },
+  {
+    Icon: Clock,
+    title: "Jsme tu i potom",
+    desc: "Po nasazení vás nenecháme. Sledujeme, ladíme a pomáháme růst — jako dlouhodobý partner.",
+  },
 ];
 
 const Tools = () => {
@@ -24,29 +50,18 @@ const Tools = () => {
           <p className="text-lg text-muted-foreground">{t("tools.subtitle")}</p>
         </div>
 
-        <div className="max-w-5xl mx-auto space-y-4">
-          {groups.map((g, gi) => (
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5 max-w-6xl mx-auto">
+          {reasons.map(({ Icon, title, desc }, i) => (
             <div
-              key={g.label}
-              className="glass rounded-2xl p-5 md:p-6 flex flex-col md:flex-row md:items-center gap-4"
-              style={{ animation: `reveal-up 0.5s ${gi * 0.08}s both` }}
+              key={title}
+              className="glass rounded-2xl p-7 hover:border-primary/40 transition-all group"
+              style={{ animation: `reveal-up 0.5s ${i * 0.08}s both` }}
             >
-              <div className="md:w-40 shrink-0">
-                <div className="text-[10px] uppercase tracking-[0.2em] text-muted-foreground font-bold">
-                  {String(gi + 1).padStart(2, "0")}
-                </div>
-                <div className="text-base font-bold">{g.label}</div>
+              <div className="w-12 h-12 rounded-xl bg-primary/10 border border-primary/20 flex items-center justify-center mb-5 group-hover:scale-110 transition-transform">
+                <Icon className="h-5 w-5 text-primary" />
               </div>
-              <div className="flex flex-wrap gap-2">
-                {g.items.map((it) => (
-                  <span
-                    key={it}
-                    className="px-3.5 py-1.5 rounded-full border border-border/60 bg-background/40 text-xs font-mono text-foreground/85 hover:border-primary/40 hover:text-primary hover:bg-primary/5 transition-all cursor-default"
-                  >
-                    {it}
-                  </span>
-                ))}
-              </div>
+              <h3 className="text-lg font-bold mb-2 tracking-tight">{title}</h3>
+              <p className="text-sm text-muted-foreground leading-relaxed">{desc}</p>
             </div>
           ))}
         </div>
