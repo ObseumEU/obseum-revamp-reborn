@@ -31,7 +31,7 @@ const translations = {
       stat3: "Spokojených klientů",
     },
     clients: {
-      title: "Spolupracujeme s lídry napříč odvětvími",
+      title: "Naši spokojení zákazníci",
     },
     services: {
       eyebrow: "Co umíme",
