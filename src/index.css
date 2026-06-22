@@ -2,75 +2,80 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Editorial Tech Noir — Obseum design system
-   Near-black canvas, premium electric blue, Instrument Sans.
-   All colors HSL.
+/* Obseum — Neural Noir
+   Deep obsidian canvas, electric cyan-violet duotone, glass surfaces.
 */
 
 @layer base {
   :root {
-    --background: 0 0% 2%;            /* #050505 */
-    --foreground: 0 0% 96%;
+    --background: 230 25% 4%;
+    --foreground: 210 20% 96%;
 
-    --card: 0 0% 4%;
-    --card-foreground: 0 0% 96%;
+    --card: 230 22% 7%;
+    --card-foreground: 210 20% 96%;
 
-    --popover: 0 0% 4%;
-    --popover-foreground: 0 0% 96%;
+    --popover: 230 22% 7%;
+    --popover-foreground: 210 20% 96%;
 
-    /* Premium electric blue */
-    --primary: 217 91% 60%;
-    --primary-foreground: 0 0% 100%;
-    --primary-glow: 217 91% 70%;
+    /* Electric cyan */
+    --primary: 190 95% 55%;
+    --primary-foreground: 230 25% 4%;
+    --primary-glow: 190 95% 70%;
 
-    --secondary: 0 0% 9%;
-    --secondary-foreground: 0 0% 90%;
-
-    --muted: 0 0% 7%;
-    --muted-foreground: 0 0% 55%;
-
-    --accent: 217 91% 60%;
+    /* Violet accent */
+    --accent: 265 90% 65%;
     --accent-foreground: 0 0% 100%;
+    --accent-glow: 265 95% 75%;
+
+    --secondary: 230 20% 11%;
+    --secondary-foreground: 210 20% 92%;
+
+    --muted: 230 18% 9%;
+    --muted-foreground: 220 10% 60%;
 
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 98%;
 
-    --border: 0 0% 12%;
-    --input: 0 0% 10%;
-    --ring: 217 91% 60%;
+    --border: 230 20% 14%;
+    --input: 230 20% 12%;
+    --ring: 190 95% 55%;
 
-    --radius: 0.875rem;
+    --radius: 1rem;
 
-    /* Editorial tokens */
-    --gradient-primary: linear-gradient(180deg, hsl(0 0% 100%) 0%, hsl(0 0% 55%) 100%);
-    --gradient-accent: linear-gradient(135deg, hsl(217 91% 60%) 0%, hsl(217 91% 45%) 100%);
-    --gradient-hero: radial-gradient(60% 60% at 50% 0%, hsl(217 91% 50% / 0.18) 0%, transparent 70%);
-    --gradient-mesh: radial-gradient(40% 40% at 20% 20%, hsl(217 91% 60% / 0.08) 0%, transparent 60%),
-                     radial-gradient(40% 40% at 80% 80%, hsl(217 91% 50% / 0.06) 0%, transparent 60%);
-    --gradient-subtle: linear-gradient(180deg, hsl(0 0% 4%) 0%, hsl(0 0% 2%) 100%);
-    --gradient-card: linear-gradient(180deg, hsl(0 0% 5%) 0%, hsl(0 0% 3%) 100%);
+    --gradient-primary: linear-gradient(135deg, hsl(190 95% 55%) 0%, hsl(220 95% 60%) 50%, hsl(265 90% 65%) 100%);
+    --gradient-accent: linear-gradient(135deg, hsl(265 90% 65%) 0%, hsl(190 95% 55%) 100%);
+    --gradient-hero: radial-gradient(70% 60% at 50% 0%, hsl(190 95% 50% / 0.25) 0%, transparent 60%),
+                     radial-gradient(50% 50% at 80% 30%, hsl(265 90% 60% / 0.20) 0%, transparent 60%),
+                     radial-gradient(40% 40% at 15% 60%, hsl(220 95% 60% / 0.15) 0%, transparent 60%);
+    --gradient-mesh: radial-gradient(40% 40% at 20% 20%, hsl(190 95% 60% / 0.10) 0%, transparent 60%),
+                     radial-gradient(40% 40% at 80% 80%, hsl(265 90% 60% / 0.08) 0%, transparent 60%);
+    --gradient-subtle: linear-gradient(180deg, hsl(230 25% 5%) 0%, hsl(230 25% 3%) 100%);
+    --gradient-card: linear-gradient(180deg, hsl(230 22% 8%) 0%, hsl(230 25% 5%) 100%);
+    --gradient-text: linear-gradient(180deg, hsl(0 0% 100%) 0%, hsl(220 10% 65%) 100%);
+    --gradient-glow: linear-gradient(90deg, transparent, hsl(190 95% 55% / 0.4), transparent);
 
-    --shadow-elegant: 0 20px 60px -20px hsl(217 91% 50% / 0.35);
-    --shadow-card: 0 1px 0 hsl(0 0% 100% / 0.04) inset, 0 8px 30px -10px hsl(0 0% 0% / 0.6);
-    --shadow-glow: 0 0 40px hsl(217 91% 60% / 0.25);
-    --shadow-premium: 0 30px 80px -20px hsl(0 0% 0% / 0.7);
+    --shadow-elegant: 0 20px 60px -20px hsl(190 95% 50% / 0.35);
+    --shadow-card: 0 1px 0 hsl(0 0% 100% / 0.04) inset, 0 16px 40px -16px hsl(0 0% 0% / 0.7);
+    --shadow-glow: 0 0 60px hsl(190 95% 55% / 0.35);
+    --shadow-glow-violet: 0 0 60px hsl(265 90% 65% / 0.35);
+    --shadow-premium: 0 30px 80px -20px hsl(0 0% 0% / 0.8);
 
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     --transition-bounce: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 
-    --sidebar-background: 0 0% 4%;
-    --sidebar-foreground: 0 0% 90%;
-    --sidebar-primary: 217 91% 60%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 0 0% 9%;
-    --sidebar-accent-foreground: 0 0% 90%;
-    --sidebar-border: 0 0% 12%;
-    --sidebar-ring: 217 91% 60%;
+    --sidebar-background: 230 22% 7%;
+    --sidebar-foreground: 210 20% 92%;
+    --sidebar-primary: 190 95% 55%;
+    --sidebar-primary-foreground: 230 25% 4%;
+    --sidebar-accent: 230 20% 11%;
+    --sidebar-accent-foreground: 210 20% 92%;
+    --sidebar-border: 230 20% 14%;
+    --sidebar-ring: 190 95% 55%;
   }
 
   .dark {
-    --background: 0 0% 2%;
-    --foreground: 0 0% 96%;
+    --background: 230 25% 4%;
+    --foreground: 210 20% 96%;
   }
 }
 
@@ -83,6 +88,7 @@
     font-family: 'Instrument Sans', system-ui, -apple-system, sans-serif;
     -webkit-font-smoothing: antialiased;
     text-rendering: optimizeLegibility;
+    scroll-behavior: smooth;
   }
 
   body {
@@ -91,8 +97,8 @@
   }
 
   ::selection {
-    background: hsl(217 91% 60%);
-    color: hsl(0 0% 100%);
+    background: hsl(190 95% 55%);
+    color: hsl(230 25% 4%);
   }
 }
 
@@ -102,13 +108,100 @@
   }
   .text-balance { text-wrap: balance; }
   .tracking-tightest { letter-spacing: -0.04em; }
+  .text-gradient {
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+  .text-gradient-light {
+    background: var(--gradient-text);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+  .glass {
+    background: hsl(230 22% 8% / 0.6);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid hsl(0 0% 100% / 0.06);
+  }
   .bg-grid {
     background-image:
       linear-gradient(to right, hsl(0 0% 100% / 0.04) 1px, transparent 1px),
       linear-gradient(to bottom, hsl(0 0% 100% / 0.04) 1px, transparent 1px);
     background-size: 64px 64px;
   }
-  .bg-noise {
-    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/></filter><rect width='100%25' height='100%25' filter='url(%23n)' opacity='0.5'/></svg>");
+  .bg-grid-sm {
+    background-image:
+      linear-gradient(to right, hsl(0 0% 100% / 0.03) 1px, transparent 1px),
+      linear-gradient(to bottom, hsl(0 0% 100% / 0.03) 1px, transparent 1px);
+    background-size: 32px 32px;
   }
+  .bg-dots {
+    background-image: radial-gradient(hsl(0 0% 100% / 0.08) 1px, transparent 1px);
+    background-size: 24px 24px;
+  }
+  .mask-radial {
+    mask-image: radial-gradient(ellipse 60% 50% at 50% 50%, black, transparent);
+    -webkit-mask-image: radial-gradient(ellipse 60% 50% at 50% 50%, black, transparent);
+  }
+  .border-gradient {
+    position: relative;
+  }
+  .border-gradient::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    padding: 1px;
+    border-radius: inherit;
+    background: linear-gradient(135deg, hsl(190 95% 55% / 0.5), transparent 40%, hsl(265 90% 65% / 0.5));
+    -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+    -webkit-mask-composite: xor;
+            mask-composite: exclude;
+    pointer-events: none;
+  }
+}
+
+@layer components {
+  .reveal {
+    animation: reveal-up 0.8s cubic-bezier(0.16, 1, 0.3, 1) both;
+  }
+  .reveal-delay-1 { animation-delay: 0.1s; }
+  .reveal-delay-2 { animation-delay: 0.2s; }
+  .reveal-delay-3 { animation-delay: 0.3s; }
+  .reveal-delay-4 { animation-delay: 0.4s; }
+}
+
+@keyframes reveal-up {
+  from { opacity: 0; transform: translateY(24px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes orbit {
+  from { transform: rotate(0deg) translateX(var(--orbit-r)) rotate(0deg); }
+  to { transform: rotate(360deg) translateX(var(--orbit-r)) rotate(-360deg); }
+}
+
+@keyframes pulse-ring {
+  0% { transform: scale(0.8); opacity: 0.6; }
+  100% { transform: scale(2.4); opacity: 0; }
+}
+
+@keyframes dash-flow {
+  to { stroke-dashoffset: -200; }
+}
+
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+@keyframes spin-slow {
+  to { transform: rotate(360deg); }
+}
+
+@keyframes float-slow {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-12px); }
 }
