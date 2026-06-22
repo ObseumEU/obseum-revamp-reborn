@@ -5,6 +5,7 @@ import Metrics from "@/components/Metrics";
 import AgentFlow from "@/components/AgentFlow";
 import Services from "@/components/Services";
 import AutomationFlow from "@/components/AutomationFlow";
+import Stories from "@/components/Stories";
 import UseCases from "@/components/UseCases";
 import Process from "@/components/Process";
 import Tools from "@/components/Tools";
@@ -22,6 +23,7 @@ const Index = () => {
         <AgentFlow />
         <Services />
         <AutomationFlow />
+        <Stories />
         <UseCases />
         <Metrics />
         <Process />
