@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { useLanguage } from "@/contexts/LanguageContext";
-import { ArrowRight, Sparkles, Cpu, Workflow } from "lucide-react";
+import { ArrowRight, Clock, Smile, TrendingUp } from "lucide-react";
 
 const Hero = () => {
   const { t } = useLanguage();
