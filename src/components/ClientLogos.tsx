@@ -1,15 +1,22 @@
 import { useLanguage } from "@/contexts/LanguageContext";
-import { Bot, Brain, Cpu, Sparkles, Workflow, Zap, Network, Atom } from "lucide-react";
+import o2Logo from "@/assets/O2-Logo-9.svg";
+import csobLogo from "@/assets/csob-1.svg";
+import cancomLogo from "@/assets/Cancom_logo_bw.svg";
+import homeCreditLogo from "@/assets/Home_Credit_logo.svg";
+import innogyLogo from "@/assets/Innogy_Logo.svg";
+import heimLogo from "@/assets/HEIM.svg";
+import idnesLogo from "@/assets/idnes.svg";
+import mycroftLogo from "@/assets/mycroftmind.svg";
 
-const projects = [
-  { name: "Neurova", Icon: Brain },
-  { name: "Flowmind", Icon: Workflow },
-  { name: "Cortexly", Icon: Cpu },
-  { name: "Lumenra", Icon: Sparkles },
-  { name: "Synthia", Icon: Atom },
-  { name: "Boltix AI", Icon: Zap },
-  { name: "Nodewise", Icon: Network },
-  { name: "Replyo", Icon: Bot },
+const logos = [
+  { name: "O2", src: o2Logo },
+  { name: "ČSOB", src: csobLogo },
+  { name: "Cancom", src: cancomLogo },
+  { name: "Home Credit", src: homeCreditLogo },
+  { name: "Innogy", src: innogyLogo },
+  { name: "HEIM", src: heimLogo },
+  { name: "iDNES", src: idnesLogo },
+  { name: "MycroftMind", src: mycroftLogo },
 ];
 
 const ClientLogos = () => {
@@ -28,15 +35,16 @@ const ClientLogos = () => {
           <div className="absolute right-0 top-0 bottom-0 w-12 bg-gradient-to-l from-cream-2 to-transparent z-10 pointer-events-none" />
 
           <div className="flex animate-[scroll_60s_linear_infinite] items-center">
-            {[...projects, ...projects].map(({ name, Icon }, i) => (
+            {[...logos, ...logos].map(({ name, src }, i) => (
               <div
                 key={`${name}-${i}`}
-                className="flex items-center gap-2.5 h-12 px-5 flex-shrink-0 mx-3 text-ink/55 hover:text-ink transition-colors"
+                className="flex items-center h-14 px-8 flex-shrink-0 mx-3 opacity-60 hover:opacity-100 transition-opacity"
               >
-                <Icon className="h-5 w-5 shrink-0" />
-                <span className="font-semibold tracking-tight text-lg whitespace-nowrap">
-                  {name}
-                </span>
+                <img
+                  src={src}
+                  alt={name}
+                  className="h-full w-auto max-w-[140px] object-contain grayscale"
+                />
               </div>
             ))}
           </div>
