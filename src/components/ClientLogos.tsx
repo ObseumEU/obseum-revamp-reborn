@@ -1,22 +1,15 @@
 import { useLanguage } from "@/contexts/LanguageContext";
-import cancomLogo from "@/assets/Cancom_logo_bw.svg";
-import o2Logo from "@/assets/O2-Logo-9.svg";
-import heimLogo from "@/assets/HEIM.svg";
-import homeCreditLogo from "@/assets/Home_Credit_logo.svg";
-import innogyLogo from "@/assets/Innogy_Logo.svg";
-import csobLogo from "@/assets/csob-1.svg";
-import mycroftmindLogo from "@/assets/mycroftmind.svg";
-import idnesLogo from "@/assets/idnes.svg";
+import { Bot, Brain, Cpu, Sparkles, Workflow, Zap, Network, Atom } from "lucide-react";
 
-const clients = [
-  { name: "O2", logo: o2Logo },
-  { name: "ČSOB", logo: csobLogo },
-  { name: "Heimstaden", logo: heimLogo },
-  { name: "Home Credit", logo: homeCreditLogo },
-  { name: "Innogy", logo: innogyLogo },
-  { name: "Cancom", logo: cancomLogo },
-  { name: "MycroftMind", logo: mycroftmindLogo },
-  { name: "Idnes", logo: idnesLogo },
+const projects = [
+  { name: "Neurova", Icon: Brain },
+  { name: "Flowmind", Icon: Workflow },
+  { name: "Cortexly", Icon: Cpu },
+  { name: "Lumenra", Icon: Sparkles },
+  { name: "Synthia", Icon: Atom },
+  { name: "Boltix AI", Icon: Zap },
+  { name: "Nodewise", Icon: Network },
+  { name: "Replyo", Icon: Bot },
 ];
 
 const ClientLogos = () => {
@@ -35,16 +28,15 @@ const ClientLogos = () => {
           <div className="absolute right-0 top-0 bottom-0 w-12 bg-gradient-to-l from-cream-2 to-transparent z-10 pointer-events-none" />
 
           <div className="flex animate-[scroll_60s_linear_infinite] items-center">
-            {[...clients, ...clients].map((c, i) => (
+            {[...projects, ...projects].map(({ name, Icon }, i) => (
               <div
-                key={`${c.name}-${i}`}
-                className="flex items-center justify-center h-16 w-36 sm:w-44 flex-shrink-0 mx-4 sm:mx-6 group"
+                key={`${name}-${i}`}
+                className="flex items-center gap-2.5 h-12 px-5 flex-shrink-0 mx-3 text-ink/55 hover:text-ink transition-colors"
               >
-                <img
-                  src={c.logo}
-                  alt={c.name}
-                  className="max-h-9 w-auto object-contain opacity-60 group-hover:opacity-90 transition filter brightness-0"
-                />
+                <Icon className="h-5 w-5 shrink-0" />
+                <span className="font-semibold tracking-tight text-lg whitespace-nowrap">
+                  {name}
+                </span>
               </div>
             ))}
           </div>
