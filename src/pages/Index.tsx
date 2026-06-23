@@ -7,6 +7,7 @@ import Services from "@/components/Services";
 import AutomationFlow from "@/components/AutomationFlow";
 import Stories from "@/components/Stories";
 import PodcastPlayer from "@/components/PodcastPlayer";
+import UseCasesPreview from "@/components/UseCasesPreview";
 import UseCases from "@/components/UseCases";
 import Process from "@/components/Process";
 import Tools from "@/components/Tools";
@@ -68,6 +69,7 @@ const Index = () => {
         <AutomationFlow />
         <Stories />
         <PodcastPlayer />
+        <UseCasesPreview />
         <UseCases />
         <Metrics />
         <Process />
