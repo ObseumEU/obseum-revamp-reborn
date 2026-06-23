@@ -1,16 +1,10 @@
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import ClientLogos from "@/components/ClientLogos";
-import Metrics from "@/components/Metrics";
-import AgentFlow from "@/components/AgentFlow";
-import Services from "@/components/Services";
-import AutomationFlow from "@/components/AutomationFlow";
 import Stories from "@/components/Stories";
 import PodcastPlayer from "@/components/PodcastPlayer";
 import UseCasesPreview from "@/components/UseCasesPreview";
-import UseCases from "@/components/UseCases";
 import Process from "@/components/Process";
-import Tools from "@/components/Tools";
 import FAQ from "@/components/FAQ";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
@@ -28,32 +22,13 @@ const faqs = [
 
 const Index = () => {
   const jsonLd = [
-    {
-      "@context": "https://schema.org",
-      "@type": "Organization",
-      name: "Obseum",
-      url: `${SITE_URL}/`,
-      description: "Implementace AI a procesní automatizace pro malé a střední firmy.",
-    },
-    {
-      "@context": "https://schema.org",
-      "@type": "WebSite",
-      name: "Obseum",
-      url: `${SITE_URL}/`,
-    },
-    {
-      "@context": "https://schema.org",
-      "@type": "FAQPage",
-      mainEntity: faqs.map((f) => ({
-        "@type": "Question",
-        name: f.q,
-        acceptedAnswer: { "@type": "Answer", text: f.a },
-      })),
-    },
+    { "@context": "https://schema.org", "@type": "Organization", name: "Obseum", url: `${SITE_URL}/`, description: "Implementace AI a procesní automatizace pro malé a střední firmy." },
+    { "@context": "https://schema.org", "@type": "WebSite", name: "Obseum", url: `${SITE_URL}/` },
+    { "@context": "https://schema.org", "@type": "FAQPage", mainEntity: faqs.map((f) => ({ "@type": "Question", name: f.q, acceptedAnswer: { "@type": "Answer", text: f.a } })) },
   ];
 
   return (
-    <div className="min-h-screen bg-background text-foreground">
+    <div className="min-h-screen bg-cream text-ink">
       <Seo
         title="Obseum — AI automatizace pro malé a střední firmy"
         description="Šetříme českým firmám hodiny denně. AI agenti, automatizace dokumentů, lead generation a virtuální asistenti pro zákazníky."
@@ -64,16 +39,10 @@ const Index = () => {
       <main>
         <Hero />
         <ClientLogos />
-        <AgentFlow />
-        <Services />
-        <AutomationFlow />
+        <UseCasesPreview />
         <Stories />
         <PodcastPlayer />
-        <UseCasesPreview />
-        <UseCases />
-        <Metrics />
         <Process />
-        <Tools />
         <FAQ />
         <Contact />
       </main>
