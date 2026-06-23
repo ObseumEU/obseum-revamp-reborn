@@ -42,6 +42,29 @@
 
     --radius: 1rem;
 
+    /* Nobig-inspired palette */
+    --cream: 36 33% 94%;
+    --cream-2: 36 30% 90%;
+    --ink: 175 60% 8%;
+    --ink-2: 175 40% 18%;
+    --teal-deep: 175 60% 12%;
+    --teal-2: 175 50% 20%;
+    --lime: 72 86% 60%;
+    --lime-ink: 175 70% 10%;
+
+    --tone-mint: 145 50% 88%;
+    --tone-mint-ink: 160 40% 25%;
+    --tone-blush: 12 70% 92%;
+    --tone-blush-ink: 12 50% 35%;
+    --tone-sky: 205 70% 92%;
+    --tone-sky-ink: 210 60% 30%;
+    --tone-sand: 38 60% 90%;
+    --tone-sand-ink: 30 50% 30%;
+    --tone-lilac: 270 50% 92%;
+    --tone-lilac-ink: 270 40% 35%;
+    --tone-lime: 72 80% 88%;
+    --tone-lime-ink: 90 50% 22%;
+
     --gradient-primary: linear-gradient(135deg, hsl(190 95% 55%) 0%, hsl(220 95% 60%) 50%, hsl(265 90% 65%) 100%);
     --gradient-accent: linear-gradient(135deg, hsl(265 90% 65%) 0%, hsl(190 95% 55%) 100%);
     --gradient-hero: radial-gradient(70% 60% at 50% 0%, hsl(190 95% 50% / 0.25) 0%, transparent 60%),
@@ -53,12 +76,14 @@
     --gradient-card: linear-gradient(180deg, hsl(230 22% 8%) 0%, hsl(230 25% 5%) 100%);
     --gradient-text: linear-gradient(180deg, hsl(0 0% 100%) 0%, hsl(220 10% 65%) 100%);
     --gradient-glow: linear-gradient(90deg, transparent, hsl(190 95% 55% / 0.4), transparent);
+    --gradient-teal: linear-gradient(180deg, hsl(var(--teal-deep)) 0%, hsl(175 70% 8%) 100%);
 
     --shadow-elegant: 0 20px 60px -20px hsl(190 95% 50% / 0.35);
     --shadow-card: 0 1px 0 hsl(0 0% 100% / 0.04) inset, 0 16px 40px -16px hsl(0 0% 0% / 0.7);
     --shadow-glow: 0 0 60px hsl(190 95% 55% / 0.35);
     --shadow-glow-violet: 0 0 60px hsl(265 90% 65% / 0.35);
     --shadow-premium: 0 30px 80px -20px hsl(0 0% 0% / 0.8);
+    --shadow-soft: 0 14px 44px -18px hsl(175 60% 8% / 0.18);
 
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     --transition-bounce: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
