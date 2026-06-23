@@ -24,6 +24,18 @@ export default {
 				ring: 'hsl(var(--ring))',
 				background: 'hsl(var(--background))',
 				foreground: 'hsl(var(--foreground))',
+				cream: { DEFAULT: 'hsl(var(--cream))', 2: 'hsl(var(--cream-2))' },
+				ink: { DEFAULT: 'hsl(var(--ink))', 2: 'hsl(var(--ink-2))' },
+				teal: { deep: 'hsl(var(--teal-deep))', 2: 'hsl(var(--teal-2))' },
+				lime: { DEFAULT: 'hsl(var(--lime))', ink: 'hsl(var(--lime-ink))' },
+				tone: {
+					mint: { DEFAULT: 'hsl(var(--tone-mint))', ink: 'hsl(var(--tone-mint-ink))' },
+					blush: { DEFAULT: 'hsl(var(--tone-blush))', ink: 'hsl(var(--tone-blush-ink))' },
+					sky: { DEFAULT: 'hsl(var(--tone-sky))', ink: 'hsl(var(--tone-sky-ink))' },
+					sand: { DEFAULT: 'hsl(var(--tone-sand))', ink: 'hsl(var(--tone-sand-ink))' },
+					lilac: { DEFAULT: 'hsl(var(--tone-lilac))', ink: 'hsl(var(--tone-lilac-ink))' },
+					lime: { DEFAULT: 'hsl(var(--tone-lime))', ink: 'hsl(var(--tone-lime-ink))' },
+				},
 				primary: {
 					DEFAULT: 'hsl(var(--primary))',
 					foreground: 'hsl(var(--primary-foreground))'

@@ -1,14 +1,136 @@
 # Obseum
 
-> Obseum implementuje AI a procesní automatizaci pro malé a střední firmy v Česku — AI agenti, automatizace dokumentů, lead generation a penetration testing.
+> Implementace AI a procesní automatizace pro malé a střední firmy v Česku.
 
-Obseum pomáhá majitelům firem ušetřit hodiny denně automatizací rutiny: zpracování e-mailů a faktur, virtuální asistenti pro zákazníky, vyhledávání ve smlouvách a propojení interních systémů. Konzultace, návrh i provoz pod jednou střechou.
+Obseum pomáhá českým firmám automatizovat opakující se procesy, nasazovat AI agenty, generovat leady přes LinkedIn, automatizovat zpracování dokumentů a budovat virtuální asistenty pro zákaznickou podporu.
 
-## Pages
+## Hlavní stránky
 
-- [Domů](/): Přehled služeb, konkrétní příběhy zákazníků, ukázky automatizace a kontakt.
-- [Kariéra](/career): Otevřené pozice v Obseum (Penetration Tester, Solution Architect).
+- [Domů](https://obseum-revamp-reborn.lovable.app/): Přehled služeb a referencí
+- [AI řešení (katalog)](https://obseum-revamp-reborn.lovable.app/use-cases): 61+ konkrétních AI řešení v 15 oblastech
+- [Career](https://obseum-revamp-reborn.lovable.app/career): Volné pozice
+- [Blog: AI automatizace pro malé firmy](https://obseum-revamp-reborn.lovable.app/blog/ai-automation-small-business)
 
-## Guides
+## Kategorie AI řešení
 
-- [AI automatizace pro malé firmy](/blog/ai-automation-small-business): Praktický průvodce, jak SMB firma bez IT týmu zavede AI — nástroje, ceny, první kroky.
+### Automatizace procesů
+Eliminujte rutinní úkony, zrychlete provoz a uvolněte týmu kapacitu na strategickou práci.
+
+- [Prediktivní analýza spotřebitelského chování](https://obseum-revamp-reborn.lovable.app/use-cases/automatizace-procesu/prediktivni-analyza-chovani-zakazniku): Předpovídá nákupní chování dříve, než se projeví v číslech.
+- [Predikce fluktuace zaměstnanců](https://obseum-revamp-reborn.lovable.app/use-cases/automatizace-procesu/predikce-fluktuace-zamestnancu): Upozorní HR tým dřív, než klíčový člověk podá výpověď.
+- [Real-time optimalizace energetických sítí](https://obseum-revamp-reborn.lovable.app/use-cases/automatizace-procesu/optimalizace-energetickych-siti): Inteligentní řízení toků energie a prevence výpadků.
+- [Detekce skrytých vzorců v Big Data](https://obseum-revamp-reborn.lovable.app/use-cases/automatizace-procesu/detekce-vzorcu-big-data): Odhaluje souvislosti, které manuální analýza přehlédne.
+- [Automatizace opakovaných back-office úkonů](https://obseum-revamp-reborn.lovable.app/use-cases/automatizace-procesu/robotic-process-automation): AI agenti zastanou rutinní administrativu.
+
+### Analýza dat
+Z dat, která už dnes máte, vytěžíme konkrétní rozhodnutí a předpovědi.
+
+- [Prediktivní modelování poptávky](https://obseum-revamp-reborn.lovable.app/use-cases/analyza-dat/prediktivni-modelovani-poptavky): Přesné odhady prodejů, zásob a kapacit na týdny dopředu.
+- [Real-time business intelligence](https://obseum-revamp-reborn.lovable.app/use-cases/analyza-dat/real-time-business-intelligence): Živý přehled klíčových metrik napříč firmou.
+- [AI segmentace zákazníků](https://obseum-revamp-reborn.lovable.app/use-cases/analyza-dat/customer-segmentace-ai): Mikrosegmenty postavené na skutečném chování, ne na demografii.
+- [Detekce anomálií v provozních datech](https://obseum-revamp-reborn.lovable.app/use-cases/analyza-dat/anomalie-v-provoznich-datech): Najdeme problém dřív, než se projeví jako výpadek.
+
+### Zákaznická podpora
+Zvládněte víc požadavků s menším týmem a vyšší spokojeností.
+
+- [AI prioritizace zákaznických požadavků](https://obseum-revamp-reborn.lovable.app/use-cases/zakaznicka-podpora/prioritizace-pozadavku): Naléhavé případy se nikdy neztratí ve frontě.
+- [AI chatbot pro proaktivní podporu](https://obseum-revamp-reborn.lovable.app/use-cases/zakaznicka-podpora/ai-chatbot-24-7): Odpovídá zákazníkům 24/7 a eskaluje jen to podstatné.
+- [AI konzultant pro optimalizaci CX](https://obseum-revamp-reborn.lovable.app/use-cases/zakaznicka-podpora/optimalizace-zakaznicke-zkusenosti): Najdeme přesné místo, kde zákazník odpadá.
+
+### Dokumenty a obsah
+Automatizujte těžkou administrativu i tvorbu obsahu ve velkém měřítku.
+
+- [Extrakce a klasifikace dokumentů](https://obseum-revamp-reborn.lovable.app/use-cases/dokumenty-obsah/extrakce-a-klasifikace-dokumentu): Z naskenovaných papírů strukturovaná data bez ručního přepisu.
+- [AI manažer znalostní báze](https://obseum-revamp-reborn.lovable.app/use-cases/dokumenty-obsah/spravce-znalostni-baze): Znalosti firmy konečně přístupné komukoli během vteřin.
+- [Generátor personalizovaných obchodních nabídek](https://obseum-revamp-reborn.lovable.app/use-cases/dokumenty-obsah/generator-obchodnich-nabidek): Profesionální nabídka na míru klientovi za pár minut.
+- [Překlady a validace technické dokumentace](https://obseum-revamp-reborn.lovable.app/use-cases/dokumenty-obsah/preklady-technicke-dokumentace): Konzistentní terminologie napříč všemi jazyky a verzemi.
+
+### Bezpečnost
+Detekujte a zastavte hrozby v reálném čase, bez nutnosti nepřetržitého lidského dohledu.
+
+- [Detekce a prevence fyzických bezpečnostních rizik](https://obseum-revamp-reborn.lovable.app/use-cases/bezpecnost/fyzicka-bezpecnost-prostor): Inteligentní vyhodnocení kamer a senzorů v reálném čase.
+- [AI Threat Detection & Prevention](https://obseum-revamp-reborn.lovable.app/use-cases/bezpecnost/threat-detection-prevention): Detekce kybernetických hrozeb v reálném čase.
+- [Rozpoznávání behaviorálních hrozeb](https://obseum-revamp-reborn.lovable.app/use-cases/bezpecnost/behavioralni-hrozby): Detekce útoků bez závislosti na známých signaturách.
+- [Detekce kybernetických útoků v reálném čase](https://obseum-revamp-reborn.lovable.app/use-cases/bezpecnost/detekce-utoku-v-realnem-case): Monitoring sítě 24/7 s automatickým blokováním.
+
+### Personalistika
+Najděte, rozvíjejte a udržte správné lidi pomocí dat, ne tabulek v Excelu.
+
+- [AI mentor pro kariérní plánování](https://obseum-revamp-reborn.lovable.app/use-cases/personalistika/ai-mentor-kariera): Strukturovaná cesta růstu na míru každému zaměstnanci.
+- [AI Talent Match: automatizace náboru](https://obseum-revamp-reborn.lovable.app/use-cases/personalistika/talent-match-nabor): Páruje kandidáty s pozicemi v zlomku času ručního třídění.
+- [Hodnocení a rozvoj kompetencí](https://obseum-revamp-reborn.lovable.app/use-cases/personalistika/hodnoceni-kompetenci): Objektivní měření dovedností napříč organizací.
+- [Personalizace vzdělávacích plánů](https://obseum-revamp-reborn.lovable.app/use-cases/personalistika/personalizace-vzdelavani): Učení přizpůsobené individuálnímu tempu a stylu.
+
+### Výroba a logistika
+Méně prostojů, nižší zmetkovitost, předvídatelnější dodávky.
+
+- [Správce flotily a prediktivní údržba](https://obseum-revamp-reborn.lovable.app/use-cases/vyroba-logistika/prediktivni-udrzba-stroju): Předejdete poruchám dříve, než zastaví výrobu.
+- [Optimalizace výrobních linek a skladů](https://obseum-revamp-reborn.lovable.app/use-cases/vyroba-logistika/optimalizace-vyrobnich-linek): Identifikace úzkých hrdel v reálném čase.
+- [Automatizovaná kontrola kvality](https://obseum-revamp-reborn.lovable.app/use-cases/vyroba-logistika/automatizovana-kontrola-kvality): Vizuální inspekce výrobků v reálném čase.
+- [Optimalizace dodavatelského řetězce](https://obseum-revamp-reborn.lovable.app/use-cases/vyroba-logistika/dodavatelsky-retezec): Štíhlejší sklad, kratší dodací lhůty, vyšší dostupnost.
+- [Robotická automatizace montážních linek](https://obseum-revamp-reborn.lovable.app/use-cases/vyroba-logistika/robotizace-montaznich-linek): Optimalizace pro Průmysl 4.0 s integrací do stávající infrastruktury.
+
+### Finance
+Predikce, automatizace a řízení rizik na úrovni nadnárodních korporací.
+
+- [Hedging a řízení měnových rizik](https://obseum-revamp-reborn.lovable.app/use-cases/finance/hedging-menova-rizika): Chrání cashflow před kurzovými výkyvy.
+- [AI portfoliový manažer](https://obseum-revamp-reborn.lovable.app/use-cases/finance/portfoliovy-manazer): Optimalizace portfolia podle definované rizikové strategie.
+- [Prognóza korporátních fúzí a akvizic](https://obseum-revamp-reborn.lovable.app/use-cases/finance/predikce-fuzi-akvizic): Identifikace M&A příležitostí dříve, než jsou veřejně známé.
+- [Predikce finančních trendů a arbitráží](https://obseum-revamp-reborn.lovable.app/use-cases/finance/predikce-financnich-trendu): Odhalí obchodní příležitosti dříve než tradiční nástroje.
+- [Řízení finančních derivátů a opcí](https://obseum-revamp-reborn.lovable.app/use-cases/finance/rizeni-derivatu): Automatizované obchodování s prediktivní analýzou.
+- [Analýza a řízení finančních toků](https://obseum-revamp-reborn.lovable.app/use-cases/finance/analyza-financnich-toku): Plná kontrola nad cashflow bez manuálních výkazů.
+
+### Marketing
+Oslovte správného člověka ve správný čas se správnou zprávou.
+
+- [AI copywriter pro personalizované kampaně](https://obseum-revamp-reborn.lovable.app/use-cases/marketing/ai-copywriter): Cílené texty pro každý segment v měřítku, které ručně nezvládnete.
+- [Optimalizace influencer strategií](https://obseum-revamp-reborn.lovable.app/use-cases/marketing/influencer-marketing): Datová doporučení místo ručního vyhodnocování.
+- [AI personalizátor marketingových strategií](https://obseum-revamp-reborn.lovable.app/use-cases/marketing/personalizace-strategii): Strategie přizpůsobené každému segmentu automaticky.
+- [Navigátor pro influencer personalizaci](https://obseum-revamp-reborn.lovable.app/use-cases/marketing/navigator-influencer): Každá spolupráce zasáhne přesně definovaný segment.
+
+### Výzkum a vývoj
+Zkracujte vývojové cykly a posuňte výzkum o řád dál.
+
+- [Akcelerátor materiálového výzkumu](https://obseum-revamp-reborn.lovable.app/use-cases/vyzkum-vyvoj/materialovy-vyzkum): Identifikuje perspektivní materiály dříve, než vstoupíte do laboratoře.
+- [Akcelerátor kvantového výzkumu](https://obseum-revamp-reborn.lovable.app/use-cases/vyzkum-vyvoj/kvantove-technologie): Pokročilé simulace a automatizovaná optimalizace experimentů.
+- [Výzkum biokompatibilních materiálů](https://obseum-revamp-reborn.lovable.app/use-cases/vyzkum-vyvoj/biokompatibilni-materialy): Identifikace perspektivních materiálových kombinací před fyzickými testy.
+- [Simulace a optimalizace výrobních materiálů](https://obseum-revamp-reborn.lovable.app/use-cases/vyzkum-vyvoj/simulace-vyrobnich-materialu): Chování materiálu předem, bez nákladných prototypů.
+- [Průzkum a modelování genomických dat](https://obseum-revamp-reborn.lovable.app/use-cases/vyzkum-vyvoj/genomicka-data): Efektivní výzkum DNA a predikce genetických onemocnění.
+
+### Prodej a obchod
+Obchodní tým se soustředí na uzavírání obchodů, ne na administrativu.
+
+- [Predikce cen a cenové strategie](https://obseum-revamp-reborn.lovable.app/use-cases/prodej-obchod/predikce-cen): Automatizovaná cenotvorba reagující na trh v reálném čase.
+- [Predikce a optimalizace prodejních teritorií](https://obseum-revamp-reborn.lovable.app/use-cases/prodej-obchod/prodejni-teritoria): Datově podložené rozdělení území napříč týmem.
+- [Personalizátor B2B prodejních strategií](https://obseum-revamp-reborn.lovable.app/use-cases/prodej-obchod/b2b-strategie): Strategie přizpůsobené segmentu i konkrétnímu kontaktu.
+- [Prediktor obchodních příležitostí a lead scoring](https://obseum-revamp-reborn.lovable.app/use-cases/prodej-obchod/lead-scoring): Obchodní tým se soustředí na leady s nejvyšší pravděpodobností konverze.
+- [AI asistent pro cross-sell a up-sell](https://obseum-revamp-reborn.lovable.app/use-cases/prodej-obchod/cross-sell-up-sell): Doporučení produktů přímo v průběhu obchodní interakce.
+
+### Právní služby
+Méně rutinní rešerše, víc strategie a poradenství.
+
+- [Predikce soudních rozhodnutí](https://obseum-revamp-reborn.lovable.app/use-cases/pravni-sluzby/predikce-soudnich-rozhodnuti): Datový základ pro strategická rozhodnutí ve sporu.
+- [Právní asistent pro analýzu smluv](https://obseum-revamp-reborn.lovable.app/use-cases/pravni-sluzby/analyza-smluv): Automatizovaná identifikace rizik ve smlouvách.
+- [Automatické zpracování právních precedentů](https://obseum-revamp-reborn.lovable.app/use-cases/pravni-sluzby/pravni-precedenty): Strukturované přehledy judikatury připravené k použití.
+- [Due Diligence a M&A analýzy](https://obseum-revamp-reborn.lovable.app/use-cases/pravni-sluzby/due-diligence): Stovky dokumentů a klíčová rizika v zlomku času.
+
+### Správa majetku
+Předcházejte poruchám a mějte inventář pod kontrolou v reálném čase.
+
+- [Optimalizace údržby a inventarizace majetku](https://obseum-revamp-reborn.lovable.app/use-cases/sprava-majetku/udrzba-inventarizace): AI předvídá poruchy dříve, než nastanou.
+- [Digitální správa a optimalizace majetku](https://obseum-revamp-reborn.lovable.app/use-cases/sprava-majetku/digitalni-inspekce): Předchází poruchám a optimalizuje plány údržby.
+- [Správa údržby a revizí technologií](https://obseum-revamp-reborn.lovable.app/use-cases/sprava-majetku/revize-technologii): Soulad s legislativou a eliminace neplánovaných prostojů.
+
+### Řízení projektů
+Predikce, koordinace a včasné varování o rizicích.
+
+- [Orchestrátor projektových zdrojů a termínů](https://obseum-revamp-reborn.lovable.app/use-cases/rizeni-projektu/orchestrator-zdroju): Konec manuálního plánování a kolizí kapacit.
+- [Koordinátor milníků a zdrojových rezerv](https://obseum-revamp-reborn.lovable.app/use-cases/rizeni-projektu/milniky-rezerv): Predikce rizik dřív, než ovlivní harmonogram.
+- [Agilní řízení projektů a predikce dopadů](https://obseum-revamp-reborn.lovable.app/use-cases/rizeni-projektu/agilni-rizeni): Lepší rozhodování na základě dat.
+
+### Zákaznická zkušenost
+Loajalita a růst tržeb postavený na konzistentně skvělém zážitku.
+
+- [Predikce a redukce churnu](https://obseum-revamp-reborn.lovable.app/use-cases/zakaznicka-zkusenost/predikce-retence): Identifikace rizikových signálů odchodu dříve, než nastanou.
+- [Virtuální ambasador značky](https://obseum-revamp-reborn.lovable.app/use-cases/zakaznicka-zkusenost/virtualni-ambasador): Autentická komunikace 24/7 v hlasu vaší značky.
+
