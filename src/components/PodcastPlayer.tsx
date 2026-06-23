@@ -86,35 +86,34 @@ const PodcastPlayer: React.FC = () => {
   };
 
   return (
-    <section id="podcast" className="py-24 md:py-32 bg-background border-t border-border">
+    <section id="podcast" className="py-24 md:py-32 bg-cream">
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
-        <div className="max-w-3xl mx-auto text-center mb-12">
-          <span className="inline-block px-3 py-1 mb-4 text-xs font-medium tracking-wider uppercase rounded-full bg-primary/10 text-primary">
+        <div className="max-w-3xl mb-12">
+          <span className="text-xs uppercase tracking-[0.22em] font-semibold text-ink/50 mb-3 block">
             {t('podcast.eyebrow')}
           </span>
-          <h2 className="text-3xl md:text-4xl font-bold tracking-tight mb-4">
+          <h2 className="text-4xl md:text-5xl font-bold tracking-tightest text-ink leading-[1.05] mb-4">
             {t('podcast.title')}
           </h2>
-          <p className="text-lg text-muted-foreground">
+          <p className="text-lg text-ink/65 leading-relaxed">
             {t('podcast.subtitle')}
           </p>
         </div>
 
-        <div className="max-w-2xl mx-auto">
-          <div className="rounded-2xl border border-border bg-card/50 backdrop-blur-sm p-6 md:p-8 shadow-sm">
-            {/* Top row */}
+        <div className="max-w-3xl">
+          <div className="rounded-3xl bg-[hsl(var(--teal-deep))] text-cream p-6 md:p-8 shadow-soft">
             <div className="flex items-start gap-5 mb-6">
-              <div className="shrink-0 w-16 h-16 rounded-xl bg-gradient-to-br from-primary/20 to-primary/5 flex items-center justify-center">
-                <Headphones className="w-7 h-7 text-primary" />
+              <div className="shrink-0 w-16 h-16 rounded-2xl bg-lime text-lime-ink flex items-center justify-center">
+                <Headphones className="w-7 h-7" />
               </div>
               <div className="flex-1 min-w-0">
                 <h3 className="text-lg font-semibold leading-snug mb-1">
                   {t('podcast.episodeTitle')}
                 </h3>
-                <p className="text-sm text-muted-foreground mb-2">
+                <p className="text-sm text-cream/70 mb-2">
                   {t('podcast.episodeDesc')}
                 </p>
-                <div className="flex items-center gap-3 text-xs text-muted-foreground">
+                <div className="flex items-center gap-3 text-xs text-cream/55">
                   <span className="inline-flex items-center gap-1">
                     <Clock className="w-3.5 h-3.5" />
                     {t('podcast.duration')}
@@ -124,18 +123,13 @@ const PodcastPlayer: React.FC = () => {
               </div>
             </div>
 
-            {/* Controls */}
             <div className="flex items-center gap-4">
               <button
                 onClick={togglePlay}
-                className="shrink-0 w-12 h-12 rounded-full bg-primary text-primary-foreground flex items-center justify-center hover:scale-105 transition-transform duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2"
+                className="shrink-0 w-12 h-12 rounded-full bg-lime text-lime-ink flex items-center justify-center hover:scale-105 transition-transform duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-lime focus-visible:ring-offset-2 focus-visible:ring-offset-[hsl(var(--teal-deep))]"
                 aria-label={isPlaying ? t('podcast.pause') : t('podcast.play')}
               >
-                {isPlaying ? (
-                  <Pause className="w-5 h-5" />
-                ) : (
-                  <Play className="w-5 h-5 ml-0.5" />
-                )}
+                {isPlaying ? <Pause className="w-5 h-5" /> : <Play className="w-5 h-5 ml-0.5" />}
               </button>
 
               <div className="flex-1">
@@ -145,13 +139,13 @@ const PodcastPlayer: React.FC = () => {
                   max={100}
                   value={progress}
                   onChange={handleSeek}
-                  className="w-full h-1.5 appearance-none rounded-full bg-border cursor-pointer accent-primary"
+                  className="w-full h-1.5 appearance-none rounded-full cursor-pointer"
                   style={{
-                    background: `linear-gradient(to right, hsl(var(--primary)) ${progress}%, hsl(var(--border)) ${progress}%)`,
+                    background: `linear-gradient(to right, hsl(var(--lime)) ${progress}%, hsl(0 0% 100% / 0.15) ${progress}%)`,
                   }}
                   aria-label={t('podcast.seekLabel')}
                 />
-                <div className="flex justify-between mt-1.5 text-xs text-muted-foreground">
+                <div className="flex justify-between mt-1.5 text-xs text-cream/55">
                   <span>{formatTime(currentTime)}</span>
                   <span>{formatTime(duration)}</span>
                 </div>
@@ -167,3 +161,4 @@ const PodcastPlayer: React.FC = () => {
 };
 
 export default PodcastPlayer;
+

@@ -3,40 +3,42 @@ import { useLanguage } from "@/contexts/LanguageContext";
 const Process = () => {
   const { t } = useLanguage();
   const steps = ["s1", "s2", "s3", "s4", "s5"];
+  const tones = [
+    "bg-tone-mint text-tone-mint-ink",
+    "bg-tone-blush text-tone-blush-ink",
+    "bg-tone-sky text-tone-sky-ink",
+    "bg-tone-sand text-tone-sand-ink",
+    "bg-tone-lilac text-tone-lilac-ink",
+  ];
 
   return (
-    <section id="process" className="py-24 md:py-32 bg-gradient-subtle relative">
+    <section id="process" className="py-24 md:py-32 bg-cream-2">
       <div className="container mx-auto px-6">
-        <div className="text-center mb-16 max-w-3xl mx-auto">
-          <span className="text-sm uppercase tracking-[0.2em] text-primary font-medium mb-4 block">
-            {t('process.eyebrow')}
+        <div className="max-w-3xl mb-14">
+          <span className="text-xs uppercase tracking-[0.22em] font-semibold text-ink/50 mb-3 block">
+            {t("process.eyebrow")}
           </span>
-          <h2 className="text-3xl md:text-5xl font-bold mb-6">{t('process.title')}</h2>
-          <p className="text-lg text-muted-foreground">{t('process.subtitle')}</p>
+          <h2 className="text-4xl md:text-5xl font-bold tracking-tightest text-ink leading-[1.05] mb-5">
+            {t("process.title")}
+          </h2>
+          <p className="text-lg text-ink/65 leading-relaxed">{t("process.subtitle")}</p>
         </div>
 
-        <div className="max-w-4xl mx-auto relative">
-          <div className="absolute left-[19px] md:left-1/2 md:-translate-x-px top-2 bottom-2 w-px bg-gradient-to-b from-primary/40 via-primary/20 to-transparent"></div>
-
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
           {steps.map((s, i) => (
             <div
               key={s}
-              className={`relative flex md:items-center gap-6 md:gap-12 mb-12 last:mb-0 ${
-                i % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"
-              }`}
+              className="bg-white rounded-3xl p-7 shadow-soft border border-ink/5 flex flex-col"
             >
-              <div className="absolute left-0 md:left-1/2 md:-translate-x-1/2 w-10 h-10 rounded-full bg-background border-2 border-primary flex items-center justify-center font-bold text-primary z-10">
+              <div className={`w-12 h-12 rounded-2xl flex items-center justify-center font-bold text-lg mb-5 ${tones[i]}`}>
                 {i + 1}
               </div>
-              <div className={`flex-1 pl-16 md:pl-0 ${i % 2 === 0 ? "md:text-right md:pr-12" : "md:pl-12"}`}>
-                <h3 className="text-xl md:text-2xl font-bold mb-2">
-                  {t(`process.steps.${s}.title`)}
-                </h3>
-                <p className="text-muted-foreground leading-relaxed">
-                  {t(`process.steps.${s}.desc`)}
-                </p>
-              </div>
-              <div className="hidden md:block flex-1"></div>
+              <h3 className="text-xl font-bold text-ink mb-2 leading-tight">
+                {t(`process.steps.${s}.title`)}
+              </h3>
+              <p className="text-ink/65 text-sm leading-relaxed">
+                {t(`process.steps.${s}.desc`)}
+              </p>
             </div>
           ))}
         </div>
