@@ -16,47 +16,34 @@ const clients = [
   { name: "Innogy", logo: innogyLogo },
   { name: "Cancom", logo: cancomLogo },
   { name: "MycroftMind", logo: mycroftmindLogo },
-  { name: "Idnes", logo: idnesLogo }
+  { name: "Idnes", logo: idnesLogo },
 ];
 
 const ClientLogos = () => {
   const { t } = useLanguage();
   return (
-    <section className="py-20 bg-background/95 backdrop-blur-sm">
+    <section className="py-16 bg-cream-2 border-y border-ink/5">
       <div className="container mx-auto px-6">
-        <div className="text-center mb-16">
-          <span className="text-sm uppercase tracking-[0.2em] text-muted-foreground/80 font-medium mb-4 block">
-            {t('clients.title')}
+        <div className="text-center mb-10">
+          <span className="text-[11px] uppercase tracking-[0.22em] font-semibold text-ink/50">
+            {t("clients.title")}
           </span>
-          <div className="w-12 h-px bg-gradient-to-r from-transparent via-primary to-transparent mx-auto"></div>
         </div>
-        
+
         <div className="relative overflow-hidden">
-          <div className="absolute left-0 top-0 bottom-0 w-6 sm:w-12 bg-gradient-to-r from-background to-transparent z-10 pointer-events-none"></div>
-          <div className="absolute right-0 top-0 bottom-0 w-6 sm:w-12 bg-gradient-to-l from-background to-transparent z-10 pointer-events-none"></div>
-          
-          <div className="flex animate-[scroll_22s_linear_infinite] md:animate-[scroll_70s_linear_infinite] will-change-transform items-center">
-            {clients.map((client, index) => (
-              <div 
-                key={`first-${index}`}
-                className="flex items-center justify-center h-16 sm:h-20 w-32 sm:w-40 md:w-48 flex-shrink-0 mx-3 sm:mx-6 md:mx-8 group cursor-default"
+          <div className="absolute left-0 top-0 bottom-0 w-12 bg-gradient-to-r from-cream-2 to-transparent z-10 pointer-events-none" />
+          <div className="absolute right-0 top-0 bottom-0 w-12 bg-gradient-to-l from-cream-2 to-transparent z-10 pointer-events-none" />
+
+          <div className="flex animate-[scroll_60s_linear_infinite] items-center">
+            {[...clients, ...clients].map((c, i) => (
+              <div
+                key={`${c.name}-${i}`}
+                className="flex items-center justify-center h-16 w-36 sm:w-44 flex-shrink-0 mx-4 sm:mx-6 group"
               >
-                <img 
-                  src={client.logo} 
-                  alt={client.name}
-                  className="max-h-10 sm:max-h-12 w-auto object-contain opacity-75 group-hover:opacity-100 transition-all duration-300 filter brightness-0 invert-[0.7] group-hover:invert-[0.8]"
-                />
-              </div>
-            ))}
-            {clients.map((client, index) => (
-              <div 
-                key={`second-${index}`}
-                className="flex items-center justify-center h-16 sm:h-20 w-32 sm:w-40 md:w-48 flex-shrink-0 mx-3 sm:mx-6 md:mx-8 group cursor-default"
-              >
-                <img 
-                  src={client.logo} 
-                  alt={client.name}
-                  className="max-h-10 sm:max-h-12 w-auto object-contain opacity-75 group-hover:opacity-100 transition-all duration-300 filter brightness-0 invert-[0.7] group-hover:invert-[0.8]"
+                <img
+                  src={c.logo}
+                  alt={c.name}
+                  className="max-h-9 w-auto object-contain opacity-60 group-hover:opacity-90 transition filter brightness-0"
                 />
               </div>
             ))}
