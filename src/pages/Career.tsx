@@ -33,26 +33,29 @@ const Career = () => {
       ]
     },
     {
-      title: "Solution Architect",
-      location: "Prague, Czech Republic", 
-      type: "Full-time",
+      title: "Soslution Architect",
+      location: "Fully Remote — Work from Anywhere",
+      type: "Full-time · 100% Remote",
       level: "Senior",
-      description: "Shape the future of enterprise technology as our Solution Architect! You'll be the master craftsperson who designs elegant, scalable solutions that transform business challenges into technological triumphs. From cloud-native architectures to AI-powered systems, you'll architect the digital backbone of tomorrow.",
+      description: "Become the mastermind behind next-gen enterprise systems as our Soslution Architect. You'll turn messy business problems into elegant, cloud-native, AI-powered architectures that scale globally. Think big, design boldly, and ship solutions that Fortune 500 teams actually love using — all from wherever you do your best work.",
       requirements: [
-        "8+ years experience in software architecture and system design",
-        "Deep expertise in cloud platforms (AWS, Azure, GCP)",
-        "Strong background in microservices, containers, and DevOps practices",
-        "Experience with enterprise integration patterns and APIs",
-        "Knowledge of modern technologies (React, Node.js, Python, .NET)",
-        "Excellent stakeholder management and presentation skills"
+        "8+ years architecting complex distributed systems end-to-end",
+        "Battle-tested across AWS, Azure and GCP — multi-cloud is your playground",
+        "Fluent in microservices, Kubernetes, event-driven design and DevOps culture",
+        "Hands-on with enterprise integration patterns, API platforms and zero-trust security",
+        "Comfortable across the stack: React, Node.js, Python, .NET, plus a curiosity for LLMs and AI agents",
+        "Sharp communicator who can turn architecture diagrams into board-room buy-in"
       ],
       benefits: [
-        "Lead innovative projects for Fortune 500 clients",
-        "Access to latest technologies and training",
-        "International travel opportunities",
-        "Stock options and comprehensive benefits package"
+        "100% remote — async-first culture, work from any timezone",
+        "Flexible hours, unlimited PTO and a real 'log off' policy",
+        "Premium home-office budget + co-working stipend anywhere in the world",
+        "Lead flagship projects for Fortune 500 and category-defining scale-ups",
+        "Generous learning budget: conferences, certifications, AI tooling — your call",
+        "Top-of-market salary, performance bonuses and stock options"
       ]
     }
+
   ];
 
   const jobPostings = jobs.map((job) => ({
