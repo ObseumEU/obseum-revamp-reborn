@@ -39,7 +39,7 @@ const ClientLogos = () => {
 
   useEffect(() => {
     let raf = 0;
-    const speed = 60; // px/s
+    const speed = 25; // px/s
 
     const tick = (ts: number) => {
       const track = trackRef.current;
