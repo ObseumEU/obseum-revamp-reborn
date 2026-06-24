@@ -7,6 +7,7 @@ import innogyLogo from "@/assets/Innogy_Logo.svg";
 import heimLogo from "@/assets/HEIM.svg";
 import idnesLogo from "@/assets/idnes.svg";
 import mycroftLogo from "@/assets/mycroftmind.svg";
+import clientLogo1 from "@/assets/client-logo-1.svg";
 
 const logos = [
   { name: "O2", src: o2Logo },
@@ -17,6 +18,7 @@ const logos = [
   { name: "HEIM", src: heimLogo },
   { name: "iDNES", src: idnesLogo },
   { name: "MycroftMind", src: mycroftLogo },
+  { name: "Client", src: clientLogo1 },
 ];
 
 const ClientLogos = () => {
